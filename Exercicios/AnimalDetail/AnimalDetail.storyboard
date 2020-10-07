@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nZu-a2-AvU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animal Detail View Controller-->
+        <scene sceneID="MrC-U8-4lw">
+            <objects>
+                <viewController id="nZu-a2-AvU" customClass="AnimalDetailViewController" customModule="Exercicios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e6o-Sk-muV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UcH-oi-AOy">
+                                <rect key="frame" x="20" y="95" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="06D-Pl-nIy"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-G8-vis">
+                                <rect key="frame" x="20" y="49" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="goTo:" destination="nZu-a2-AvU" eventType="touchUpInside" id="8w4-px-WTi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8h-Ms-J61">
+                                <rect key="frame" x="136.5" y="790" width="141" height="42"/>
+                                <accessibility key="accessibilityConfiguration" hint="Click here to get to know more!"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Still Curious?"/>
+                                <connections>
+                                    <action selector="goTo:" destination="nZu-a2-AvU" eventType="touchUpInside" id="ntB-iy-d40"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiO-uU-Gvj">
+                                <rect key="frame" x="20" y="385" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeY-fy-cWo">
+                                <rect key="frame" x="20" y="431" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgv-Tw-cvd">
+                                <rect key="frame" x="20" y="477" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-5a-InR">
+                                <rect key="frame" x="20" y="523" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="210-OD-YPH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GeY-fy-cWo" firstAttribute="top" secondItem="YiO-uU-Gvj" secondAttribute="bottom" constant="16" id="1uG-hk-qkf"/>
+                            <constraint firstItem="Cgv-Tw-cvd" firstAttribute="top" secondItem="GeY-fy-cWo" secondAttribute="bottom" constant="16" id="6cI-pv-De3"/>
+                            <constraint firstItem="Cgv-Tw-cvd" firstAttribute="leading" secondItem="210-OD-YPH" secondAttribute="leading" constant="20" id="MDm-Tt-X9p"/>
+                            <constraint firstItem="UcH-oi-AOy" firstAttribute="top" secondItem="bAx-G8-vis" secondAttribute="bottom" constant="16" id="R0d-d5-Xwe"/>
+                            <constraint firstItem="GeY-fy-cWo" firstAttribute="leading" secondItem="210-OD-YPH" secondAttribute="leading" constant="20" id="SZR-6o-YHz"/>
+                            <constraint firstItem="210-OD-YPH" firstAttribute="trailing" secondItem="UcH-oi-AOy" secondAttribute="trailing" constant="20" id="Yn9-G6-eJD"/>
+                            <constraint firstItem="YiO-uU-Gvj" firstAttribute="leading" secondItem="210-OD-YPH" secondAttribute="leading" constant="20" id="aHX-qE-9e8"/>
+                            <constraint firstItem="UcH-oi-AOy" firstAttribute="leading" secondItem="210-OD-YPH" secondAttribute="leading" constant="20" id="fmD-Iw-B0M"/>
+                            <constraint firstItem="F2e-5a-InR" firstAttribute="top" secondItem="Cgv-Tw-cvd" secondAttribute="bottom" constant="16" id="jgO-yY-uFA"/>
+                            <constraint firstItem="bAx-G8-vis" firstAttribute="top" secondItem="210-OD-YPH" secondAttribute="top" constant="5" id="lyb-SR-U7s"/>
+                            <constraint firstItem="YiO-uU-Gvj" firstAttribute="top" secondItem="UcH-oi-AOy" secondAttribute="bottom" constant="40" id="mTI-yC-DR3"/>
+                            <constraint firstItem="bAx-G8-vis" firstAttribute="leading" secondItem="210-OD-YPH" secondAttribute="leading" constant="20" id="ofm-oC-b39"/>
+                            <constraint firstItem="210-OD-YPH" firstAttribute="trailing" secondItem="GeY-fy-cWo" secondAttribute="trailing" constant="20" id="qpD-ba-m2r"/>
+                            <constraint firstItem="A8h-Ms-J61" firstAttribute="centerX" secondItem="e6o-Sk-muV" secondAttribute="centerX" id="tCV-pU-GbA"/>
+                            <constraint firstItem="210-OD-YPH" firstAttribute="trailing" secondItem="YiO-uU-Gvj" secondAttribute="trailing" constant="20" id="uAv-U2-WkI"/>
+                            <constraint firstItem="210-OD-YPH" firstAttribute="trailing" secondItem="F2e-5a-InR" secondAttribute="trailing" constant="20" id="uzF-Zn-Im0"/>
+                            <constraint firstItem="210-OD-YPH" firstAttribute="trailing" secondItem="Cgv-Tw-cvd" secondAttribute="trailing" constant="20" id="y0v-hh-20U"/>
+                            <constraint firstItem="F2e-5a-InR" firstAttribute="leading" secondItem="210-OD-YPH" secondAttribute="leading" constant="20" id="yiL-QS-Ibn"/>
+                            <constraint firstItem="210-OD-YPH" firstAttribute="bottom" secondItem="A8h-Ms-J61" secondAttribute="bottom" constant="30" id="zW1-FY-LN6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animalBreedLabel" destination="GeY-fy-cWo" id="S8b-0Y-nt0"/>
+                        <outlet property="animalImageView" destination="UcH-oi-AOy" id="CxW-Bj-cUT"/>
+                        <outlet property="animalNameLabel" destination="YiO-uU-Gvj" id="KAs-Sd-9eq"/>
+                        <outlet property="animalSpeciesLabel" destination="Cgv-Tw-cvd" id="7wW-f7-Gto"/>
+                        <outlet property="animalWeightLabel" destination="F2e-5a-InR" id="XqZ-Mi-YSC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kY6-nL-9qP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
