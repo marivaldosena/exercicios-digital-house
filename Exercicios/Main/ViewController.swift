@@ -33,6 +33,8 @@ class ViewController: UIViewController {
                 goToEmployeesList()
             case "View Animals":
                 goToAnimalList()
+            case "View Cars":
+                goToCarList()
             default:
                 print("Error")
             }

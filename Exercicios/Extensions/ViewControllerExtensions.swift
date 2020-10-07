@@ -19,4 +19,10 @@ extension ViewController {
             present(viewController, animated: true, completion: nil)
         }
     }
+    
+    func goToCarList() {
+        if let viewController = CarListViewController.getControllerView() {
+            present(viewController, animated: true, completion: nil)
+        }
+    }
 }

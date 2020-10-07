@@ -15,20 +15,35 @@ struct K {
         static let animalListName = "AnimalList"
         static let animalDetailName = "AnimalDetail"
         static let animalCellName = "AnimalListTableViewCell"
+        static let carListName = "CarList"
+        static let carDetailName = "CarDetail"
+        static let carCellName = "CarListCollectionViewCell"
     }
     
     struct Images {
         static let employeeImageName = "Employee"
-        static let dogImageName = "Dog"
-        static let catImageName = "Cat"
-        static let developerImageName = "Programmer"
-        static let elephantImageName = "Elephant"
-        static let tigerImageName = "Tiger"
-        static let manateeImageName = "Manatee"
-        static let birdImageName = "Bird"
-        static let cowImageName = "Cow"
-        static let turtleImageName = "Tortoise"
-        static let spiderImageName = "Spider"
+        
+        struct Animals {
+            static let dogImageName = "Dog"
+            static let catImageName = "Cat"
+            static let developerImageName = "Programmer"
+            static let elephantImageName = "Elephant"
+            static let tigerImageName = "Tiger"
+            static let manateeImageName = "Manatee"
+            static let birdImageName = "Bird"
+            static let cowImageName = "Cow"
+            static let turtleImageName = "Tortoise"
+            static let spiderImageName = "Spider"
+        }
+        
+        struct Cars {
+            static let kombiImageName = "BlueKombi"
+            static let brasiliaImageName = "Brasilia"
+            static let defaultCarImageName = "Car"
+            static let chevroletImageName = "Chevrolet1957"
+            static let fuscaImageName = "Fusca"
+            static let oldCarImageName = "OldCar"
+        }
     }
     
     struct WebBrowser {
