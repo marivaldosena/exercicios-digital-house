@@ -12,10 +12,18 @@ class CarListViewController: UIViewController {
     private var repository: CarRepository = CarRepository()
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         carCollectionView?.delegate = self
         carCollectionView?.dataSource = self
         
-        super.viewDidLoad()
+        repository.addCar(car: CarSeed.seed())
+        
+        title = "Car List"
+    }
+    
+    @IBAction func goToRoot(_ sender: UIButton) {
+        self.goToRoot()
     }
     
     func getRepository() -> CarRepository {

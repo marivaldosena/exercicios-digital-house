@@ -21,11 +21,19 @@ extension CarDetailViewController {
     }
     
     func goToRoot() {
-        navigationController?.popToRootViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     func setTitle(title: String) {
         self.title = title
+    }
+    
+    func updateUIInterface() {
+        let car = self.getRepository()?.getSelectedCar()
+        
+        title = car?.carName ?? "Not Available"
+        carImageView?.image = UIImage(named: car?.imageName ?? K.Images.Cars.defaultCarImageName)
+        carNameLabel?.text = car?.carName ?? "Not Available"
     }
 }
 

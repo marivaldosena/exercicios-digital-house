@@ -21,8 +21,14 @@ extension ViewController {
     }
     
     func goToCarList() {
-        if let viewController = CarListViewController.getControllerView() {
-            present(viewController, animated: true, completion: nil)
+//        if let viewController = CarListViewController.getControllerView() {
+//            if let parent = viewController.parent {
+//                present(parent, animated: true, completion: nil)
+//            }
+//        }
+        
+        if let uiNavigationController = CarListViewController.getNavigationController() {
+            present(uiNavigationController, animated: true, completion: nil)
         }
     }
 }

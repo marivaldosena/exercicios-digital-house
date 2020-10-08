@@ -8,7 +8,7 @@
 import Foundation
 
 struct CarSeed {
-    private var items: [Car] = [
+    private static var items: [Car] = [
         Car(carName: "Car", imageName: K.Images.Cars.defaultCarImageName),
         Car(carName: "Kombi", imageName: K.Images.Cars.kombiImageName),
         Car(carName: "Brasilia", imageName: K.Images.Cars.brasiliaImageName),
@@ -16,4 +16,8 @@ struct CarSeed {
         Car(carName: "Fusca", imageName: K.Images.Cars.fuscaImageName),
         Car(carName: "Old Car", imageName: K.Images.Cars.oldCarImageName)
     ]
+    
+    static func seed() -> [Car] {
+        return items
+    }
 }

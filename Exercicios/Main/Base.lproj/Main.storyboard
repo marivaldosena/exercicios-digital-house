@@ -25,11 +25,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKx-CG-0lF">
-                                <rect key="frame" x="116" y="422" width="91" height="30"/>
+                                <rect key="frame" x="149" y="423" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Animals"/>
                                 <connections>
                                     <action selector="goTo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ug6-Mf-b39"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rl5-pf-cBC">
+                                <rect key="frame" x="160" y="536" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View Cars"/>
+                                <connections>
+                                    <action selector="goTo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDF-bU-4l8"/>
                                 </connections>
                             </button>
                         </subviews>

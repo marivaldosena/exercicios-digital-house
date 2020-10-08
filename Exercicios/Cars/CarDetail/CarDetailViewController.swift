@@ -10,13 +10,22 @@ import UIKit
 class CarDetailViewController: UIViewController {
     @IBOutlet weak var carImageView: UIImageView?
     @IBOutlet weak var carNameLabel: UILabel?
+    
+    private var repository: CarRepository?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.updateUIInterface()
     }
     
+    func setRepository(repository: CarRepository?) {
+        self.repository = repository
+    }
+    
+    func getRepository() -> CarRepository? {
+        return self.repository
+    }
 
     /*
     // MARK: - Navigation

@@ -9,8 +9,20 @@ import UIKit
 
 //MARK: - CarListViewController
 extension CarListViewController {
+    static func getNavigationController() -> UINavigationController? {
+        guard let uiNavigationController = UIStoryboard(name: K.ViewNames.carListName, bundle: nil).instantiateInitialViewController() as? UINavigationController else {
+            return nil
+        }
+
+        return uiNavigationController
+    }
+    
     static func getControllerView() -> CarListViewController? {
-        if let viewController = UIStoryboard(name: K.ViewNames.carListName, bundle: nil).instantiateInitialViewController() as? CarListViewController {
+        guard let uiNavigationController = CarListViewController.getNavigationController() else {
+            return nil
+        }
+        
+        if let viewController = uiNavigationController.topViewController as? CarListViewController {
             return viewController
         }
         
@@ -26,8 +38,18 @@ extension CarListViewController {
         }
     }
     
+    func goToRoot() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func setSelectedCar(car: Car?) {
         self.getRepository().setSelectedCar(car: car)
+        
+        if let viewController = CarDetailViewController.getViewController() {
+            viewController.setRepository(repository: self.getRepository())
+            
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 
