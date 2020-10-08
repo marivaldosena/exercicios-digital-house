@@ -22,6 +22,9 @@
 		C9B53D2A252BF17E00571573 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B53D29252BF17E00571573 /* AnimalDetailViewController.swift */; };
 		C9B53D2F252BF1A400571573 /* AnimalDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B53D2E252BF1A400571573 /* AnimalDetail.storyboard */; };
 		C9B53D32252BF22800571573 /* AnimalDetailViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B53D31252BF22800571573 /* AnimalDetailViewControllerExtensions.swift */; };
+		C9C32BC1252F6211005F3280 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C32BC0252F6211005F3280 /* Person.swift */; };
+		C9C32BC5252F6602005F3280 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C32BC4252F6602005F3280 /* RepositoryProtocol.swift */; };
+		C9C32BC8252F686C005F3280 /* PeopleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C32BC7252F686C005F3280 /* PeopleRepository.swift */; };
 		C9C6C1A5252ACA040011BA8F /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C6C1A4252ACA040011BA8F /* EmployeeDetailViewController.swift */; };
 		C9C6C1A8252ACA170011BA8F /* EmployeeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C6C1A7252ACA170011BA8F /* EmployeeDetail.storyboard */; };
 		C9DE5986252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE5985252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift */; };
@@ -66,6 +69,9 @@
 		C9B53D29252BF17E00571573 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		C9B53D2E252BF1A400571573 /* AnimalDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimalDetail.storyboard; sourceTree = "<group>"; };
 		C9B53D31252BF22800571573 /* AnimalDetailViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewControllerExtensions.swift; sourceTree = "<group>"; };
+		C9C32BC0252F6211005F3280 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C9C32BC4252F6602005F3280 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		C9C32BC7252F686C005F3280 /* PeopleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRepository.swift; sourceTree = "<group>"; };
 		C9C6C1A4252ACA040011BA8F /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		C9C6C1A7252ACA170011BA8F /* EmployeeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeDetail.storyboard; sourceTree = "<group>"; };
 		C9DE5985252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 				C9F34F38252A77E500386FDB /* Employee.swift */,
 				C9DE5998252BA9960070DFC7 /* Animal.swift */,
 				C9A5E84A252C02D200220E9F /* Car.swift */,
+				C9C32BC0252F6211005F3280 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 				C9F34F48252A7EFD00386FDB /* EmployeeRepository.swift */,
 				C9DE599B252BB0B50070DFC7 /* AnimalRepository.swift */,
 				C9F02D37252DECE600BFA062 /* CarRepository.swift */,
+				C9C32BC7252F686C005F3280 /* PeopleRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -171,6 +179,14 @@
 				C9B53D29252BF17E00571573 /* AnimalDetailViewController.swift */,
 			);
 			path = AnimalDetail;
+			sourceTree = "<group>";
+		};
+		C9C32BC3252F65EE005F3280 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C9C32BC4252F6602005F3280 /* RepositoryProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		C9DE5991252BA8F00070DFC7 /* AnimalList */ = {
@@ -257,6 +273,7 @@
 		C9F34F37252A77C000386FDB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C9C32BC3252F65EE005F3280 /* Protocols */,
 				C9541B13252BA46400DC70B6 /* Seed */,
 				C9541B12252BA45000DC70B6 /* Repository */,
 				C9541B11252BA44300DC70B6 /* Models */,
@@ -369,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C967EAB1252BCA46002DDE2F /* AnimalListTableViewCell.swift in Sources */,
+				C9C32BC5252F6602005F3280 /* RepositoryProtocol.swift in Sources */,
 				C9F34F42252A7B7A00386FDB /* EmployeeListViewController.swift in Sources */,
 				C9A5E84B252C02D200220E9F /* Car.swift in Sources */,
 				C95BCE05252A8CC800B2E190 /* EmployeePosition.swift in Sources */,
@@ -383,6 +401,7 @@
 				C9DE5986252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift in Sources */,
 				C9F02D44252E27B100BFA062 /* CarDetailViewController.swift in Sources */,
 				C9DE598F252BA8B00070DFC7 /* ViewControllerExtensions.swift in Sources */,
+				C9C32BC1252F6211005F3280 /* Person.swift in Sources */,
 				C9F34F49252A7EFD00386FDB /* EmployeeRepository.swift in Sources */,
 				C9DE5999252BA9960070DFC7 /* Animal.swift in Sources */,
 				C967EAAE252BC1AC002DDE2F /* AnimalListViewControllerExtensions.swift in Sources */,
@@ -398,6 +417,7 @@
 				C9F02D38252DECE600BFA062 /* CarRepository.swift in Sources */,
 				C95BCE08252A8F9B00B2E190 /* EmployeeSeed.swift in Sources */,
 				C9784CDE252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift in Sources */,
+				C9C32BC8252F686C005F3280 /* PeopleRepository.swift in Sources */,
 				C9F34F25252A769600386FDB /* SceneDelegate.swift in Sources */,
 				C9C6C1A5252ACA040011BA8F /* EmployeeDetailViewController.swift in Sources */,
 			);
