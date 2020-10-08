@@ -18,6 +18,12 @@ struct K {
         static let carListName = "CarList"
         static let carDetailName = "CarDetail"
         static let carCellName = "CarListCollectionViewCell"
+        
+        struct People {
+            static let peopleListName = "PeopleList"
+            static let peopleDetailName = "PeopleDetail"
+            static let peopleCellName = "PeopleListCollectionViewCell"
+        }
     }
     
     struct Images {

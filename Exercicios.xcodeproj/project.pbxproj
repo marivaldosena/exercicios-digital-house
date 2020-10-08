@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C91348ED252F72D400E8951F /* PeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91348EC252F72D400E8951F /* PeopleListViewController.swift */; };
+		C91348F1252F738900E8951F /* PeopleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91348F0252F738900E8951F /* PeopleList.storyboard */; };
+		C91348F5252F746700E8951F /* PeopleListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91348F4252F746700E8951F /* PeopleListCollectionViewCell.swift */; };
+		C9134900252F76A100E8951F /* PeopleListViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91348FF252F76A100E8951F /* PeopleListViewControllerExtensions.swift */; };
+		C9134906252F78C100E8951F /* PeopleListCollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9134905252F78C100E8951F /* PeopleListCollectionViewCellExtensions.swift */; };
 		C949A54B252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949A54A252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift */; };
 		C95BCE05252A8CC800B2E190 /* EmployeePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95BCE04252A8CC800B2E190 /* EmployeePosition.swift */; };
 		C95BCE08252A8F9B00B2E190 /* EmployeeSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95BCE07252A8F9B00B2E190 /* EmployeeSeed.swift */; };
@@ -54,6 +59,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C91348EC252F72D400E8951F /* PeopleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewController.swift; sourceTree = "<group>"; };
+		C91348F0252F738900E8951F /* PeopleList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PeopleList.storyboard; sourceTree = "<group>"; };
+		C91348F4252F746700E8951F /* PeopleListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C91348FF252F76A100E8951F /* PeopleListViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewControllerExtensions.swift; sourceTree = "<group>"; };
+		C9134905252F78C100E8951F /* PeopleListCollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListCollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 		C949A54A252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 		C95BCE04252A8CC800B2E190 /* EmployeePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePosition.swift; sourceTree = "<group>"; };
 		C95BCE07252A8F9B00B2E190 /* EmployeeSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSeed.swift; sourceTree = "<group>"; };
@@ -113,6 +123,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91348EB252F72C100E8951F /* People */ = {
+			isa = PBXGroup;
+			children = (
+				C91348F8252F74F100E8951F /* PeopleList */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		C91348F8252F74F100E8951F /* PeopleList */ = {
+			isa = PBXGroup;
+			children = (
+				C91348F0252F738900E8951F /* PeopleList.storyboard */,
+				C91348EC252F72D400E8951F /* PeopleListViewController.swift */,
+				C91348F4252F746700E8951F /* PeopleListCollectionViewCell.swift */,
+			);
+			path = PeopleList;
+			sourceTree = "<group>";
+		};
+		C91348FA252F75FC00E8951F /* Employees */ = {
+			isa = PBXGroup;
+			children = (
+				C9DE5985252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift */,
+				C9DE5988252BA7E20070DFC7 /* EmployeeExtensions.swift */,
+				C9DE598B252BA83E0070DFC7 /* EmployeeDetailViewControllerExtensions.swift */,
+			);
+			path = Employees;
+			sourceTree = "<group>";
+		};
+		C91348FC252F761500E8951F /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				C967EAAD252BC1AC002DDE2F /* AnimalListViewControllerExtensions.swift */,
+				C9B53D31252BF22800571573 /* AnimalDetailViewControllerExtensions.swift */,
+			);
+			path = Animals;
+			sourceTree = "<group>";
+		};
+		C91348FD252F762200E8951F /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+				C9784CDA252E397100ED3CD4 /* CarListViewControllerExtensions.swift */,
+				C9784CDD252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift */,
+				C949A54A252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift */,
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
+		C9134902252F76A500E8951F /* People */ = {
+			isa = PBXGroup;
+			children = (
+				C91348FF252F76A100E8951F /* PeopleListViewControllerExtensions.swift */,
+				C9134905252F78C100E8951F /* PeopleListCollectionViewCellExtensions.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
 		C9541B11252BA44300DC70B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,15 +215,11 @@
 		C9541B14252BA4BA00DC70B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C9DE5985252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift */,
-				C9DE5988252BA7E20070DFC7 /* EmployeeExtensions.swift */,
-				C9DE598B252BA83E0070DFC7 /* EmployeeDetailViewControllerExtensions.swift */,
 				C9DE598E252BA8B00070DFC7 /* ViewControllerExtensions.swift */,
-				C967EAAD252BC1AC002DDE2F /* AnimalListViewControllerExtensions.swift */,
-				C9B53D31252BF22800571573 /* AnimalDetailViewControllerExtensions.swift */,
-				C9784CDA252E397100ED3CD4 /* CarListViewControllerExtensions.swift */,
-				C9784CDD252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift */,
-				C949A54A252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift */,
+				C91348FA252F75FC00E8951F /* Employees */,
+				C91348FC252F761500E8951F /* Animals */,
+				C91348FD252F762200E8951F /* Cars */,
+				C9134902252F76A500E8951F /* People */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +321,7 @@
 				C9F02D3A252E118200BFA062 /* Employees */,
 				C9F02D3C252E119400BFA062 /* Animals */,
 				C9F02D3D252E11A200BFA062 /* Cars */,
+				C91348EB252F72C100E8951F /* People */,
 				C9F34F44252A7CEA00386FDB /* Main */,
 				C9F34F22252A769600386FDB /* AppDelegate.swift */,
 				C9F34F24252A769600386FDB /* SceneDelegate.swift */,
@@ -294,8 +357,8 @@
 		C9F34F3C252A79DB00386FDB /* EmployeeDetail */ = {
 			isa = PBXGroup;
 			children = (
-				C9C6C1A4252ACA040011BA8F /* EmployeeDetailViewController.swift */,
 				C9C6C1A7252ACA170011BA8F /* EmployeeDetail.storyboard */,
+				C9C6C1A4252ACA040011BA8F /* EmployeeDetailViewController.swift */,
 			);
 			path = EmployeeDetail;
 			sourceTree = "<group>";
@@ -373,6 +436,7 @@
 				C9F02D47252E27D200BFA062 /* CarDetail.storyboard in Resources */,
 				C9F34F2A252A769600386FDB /* Main.storyboard in Resources */,
 				C9B53D2F252BF1A400571573 /* AnimalDetail.storyboard in Resources */,
+				C91348F1252F738900E8951F /* PeopleList.storyboard in Resources */,
 				C9DE5996252BA9380070DFC7 /* AnimalList.storyboard in Resources */,
 				C9C6C1A8252ACA170011BA8F /* EmployeeDetail.storyboard in Resources */,
 			);
@@ -390,8 +454,10 @@
 				C9F34F42252A7B7A00386FDB /* EmployeeListViewController.swift in Sources */,
 				C9A5E84B252C02D200220E9F /* Car.swift in Sources */,
 				C95BCE05252A8CC800B2E190 /* EmployeePosition.swift in Sources */,
+				C91348ED252F72D400E8951F /* PeopleListViewController.swift in Sources */,
 				C9DE5993252BA91E0070DFC7 /* AnimalListViewController.swift in Sources */,
 				C9DE599C252BB0B50070DFC7 /* AnimalRepository.swift in Sources */,
+				C9134906252F78C100E8951F /* PeopleListCollectionViewCellExtensions.swift in Sources */,
 				C9DE599F252BB8700070DFC7 /* AnimalSeed.swift in Sources */,
 				C95BCE0B252ABA1300B2E190 /* EmployeeListTableViewCell.swift in Sources */,
 				C9A5E848252C029900220E9F /* CarListViewController.swift in Sources */,
@@ -407,12 +473,14 @@
 				C967EAAE252BC1AC002DDE2F /* AnimalListViewControllerExtensions.swift in Sources */,
 				C9B53D32252BF22800571573 /* AnimalDetailViewControllerExtensions.swift in Sources */,
 				C949A54B252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift in Sources */,
+				C9134900252F76A100E8951F /* PeopleListViewControllerExtensions.swift in Sources */,
 				C9B53D2A252BF17E00571573 /* AnimalDetailViewController.swift in Sources */,
 				C9F02D40252E247500BFA062 /* CarSeed.swift in Sources */,
 				C9F34F27252A769600386FDB /* ViewController.swift in Sources */,
 				C9DE59A8252BBE090070DFC7 /* K.swift in Sources */,
 				C9784CDB252E397100ED3CD4 /* CarListViewControllerExtensions.swift in Sources */,
 				C9F34F23252A769600386FDB /* AppDelegate.swift in Sources */,
+				C91348F5252F746700E8951F /* PeopleListCollectionViewCell.swift in Sources */,
 				C9F34F39252A77E500386FDB /* Employee.swift in Sources */,
 				C9F02D38252DECE600BFA062 /* CarRepository.swift in Sources */,
 				C95BCE08252A8F9B00B2E190 /* EmployeeSeed.swift in Sources */,
