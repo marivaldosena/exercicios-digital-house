@@ -144,6 +144,7 @@
 		C91348EB252F72C100E8951F /* Composers */ = {
 			isa = PBXGroup;
 			children = (
+				C9134902252F76A500E8951F /* Extensions */,
 				C92F0B5425310FA700F3262D /* ComposerDetail */,
 				C91348F8252F74F100E8951F /* ComposerList */,
 			);
@@ -160,42 +161,42 @@
 			path = ComposerList;
 			sourceTree = "<group>";
 		};
-		C91348FA252F75FC00E8951F /* Employees */ = {
+		C91348FA252F75FC00E8951F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				C9DE5985252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift */,
 				C9DE5988252BA7E20070DFC7 /* EmployeeExtensions.swift */,
 				C9DE598B252BA83E0070DFC7 /* EmployeeDetailViewControllerExtensions.swift */,
 			);
-			path = Employees;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C91348FC252F761500E8951F /* Animals */ = {
+		C91348FC252F761500E8951F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				C967EAAD252BC1AC002DDE2F /* AnimalListViewControllerExtensions.swift */,
 				C9B53D31252BF22800571573 /* AnimalDetailViewControllerExtensions.swift */,
 			);
-			path = Animals;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C91348FD252F762200E8951F /* Cars */ = {
+		C91348FD252F762200E8951F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				C9784CDA252E397100ED3CD4 /* CarListViewControllerExtensions.swift */,
 				C9784CDD252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift */,
 				C949A54A252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift */,
 			);
-			path = Cars;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C9134902252F76A500E8951F /* Composers */ = {
+		C9134902252F76A500E8951F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				C91348FF252F76A100E8951F /* ComposerListViewControllerExtensions.swift */,
 				C9134905252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift */,
 			);
-			path = Composers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C92F0B502530E37600F3262D /* Utils */ = {
@@ -209,35 +210,21 @@
 		C92F0B5425310FA700F3262D /* ComposerDetail */ = {
 			isa = PBXGroup;
 			children = (
-				C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */,
 				C92F0B582531109300F3262D /* ComposerDetail.storyboard */,
+				C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */,
 			);
 			path = ComposerDetail;
 			sourceTree = "<group>";
 		};
-		C93FC63B25300BED00670A74 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				C9DE598E252BA8B00070DFC7 /* MainViewControllerExtensions.swift */,
-				C93FC63C25300C1500670A74 /* AppListCollectionViewCellExtensions.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		C9541B11252BA44300DC70B6 /* Models */ = {
+		C92F0B5D25311FB300F3262D /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				C95BCE04252A8CC800B2E190 /* EmployeePosition.swift */,
-				C9F34F38252A77E500386FDB /* Employee.swift */,
-				C9DE5998252BA9960070DFC7 /* Animal.swift */,
-				C9A5E84A252C02D200220E9F /* Car.swift */,
-				C9C32BC0252F6211005F3280 /* Composer.swift */,
-				C93FC6332530030F00670A74 /* App.swift */,
 			);
-			path = Models;
+			path = Enums;
 			sourceTree = "<group>";
 		};
-		C9541B12252BA45000DC70B6 /* Repository */ = {
+		C9541B12252BA45000DC70B6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				C9F34F48252A7EFD00386FDB /* EmployeeRepository.swift */,
@@ -246,10 +233,10 @@
 				C9C32BC7252F686C005F3280 /* ComposerRepository.swift */,
 				C93FC63825300A1C00670A74 /* AppRepository.swift */,
 			);
-			path = Repository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
-		C9541B13252BA46400DC70B6 /* Seed */ = {
+		C9541B13252BA46400DC70B6 /* Seeds */ = {
 			isa = PBXGroup;
 			children = (
 				C95BCE07252A8F9B00B2E190 /* EmployeeSeed.swift */,
@@ -258,17 +245,14 @@
 				C97D55C8252FA23D005F61C3 /* ComposerSeed.swift */,
 				C93FC63F25300E1500670A74 /* AppSeed.swift */,
 			);
-			path = Seed;
+			path = Seeds;
 			sourceTree = "<group>";
 		};
 		C9541B14252BA4BA00DC70B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C93FC63B25300BED00670A74 /* Main */,
-				C91348FA252F75FC00E8951F /* Employees */,
-				C91348FC252F761500E8951F /* Animals */,
-				C91348FD252F762200E8951F /* Cars */,
-				C9134902252F76A500E8951F /* Composers */,
+				C9DE598E252BA8B00070DFC7 /* MainViewControllerExtensions.swift */,
+				C93FC63C25300C1500670A74 /* AppListCollectionViewCellExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +297,7 @@
 		C9F02D3A252E118200BFA062 /* Employees */ = {
 			isa = PBXGroup;
 			children = (
+				C91348FA252F75FC00E8951F /* Extensions */,
 				C9F34F3C252A79DB00386FDB /* EmployeeDetail */,
 				C9F34F3B252A79CB00386FDB /* EmployeeList */,
 			);
@@ -322,6 +307,7 @@
 		C9F02D3C252E119400BFA062 /* Animals */ = {
 			isa = PBXGroup;
 			children = (
+				C91348FC252F761500E8951F /* Extensions */,
 				C9B53D2C252BF18700571573 /* AnimalDetail */,
 				C9DE5991252BA8F00070DFC7 /* AnimalList */,
 			);
@@ -331,6 +317,7 @@
 		C9F02D3D252E11A200BFA062 /* Cars */ = {
 			isa = PBXGroup;
 			children = (
+				C91348FD252F762200E8951F /* Extensions */,
 				C9F02D42252E277500BFA062 /* CarDetail */,
 				C9A5E845252C027E00220E9F /* CarList */,
 			);
@@ -366,7 +353,9 @@
 			isa = PBXGroup;
 			children = (
 				C92F0B502530E37600F3262D /* Utils */,
-				C9541B14252BA4BA00DC70B6 /* Extensions */,
+				C9541B12252BA45000DC70B6 /* Repositories */,
+				C9C32BC3252F65EE005F3280 /* Protocols */,
+				C9541B13252BA46400DC70B6 /* Seeds */,
 				C9F34F37252A77C000386FDB /* Domain */,
 				C9F02D3A252E118200BFA062 /* Employees */,
 				C9F02D3C252E119400BFA062 /* Animals */,
@@ -386,10 +375,12 @@
 		C9F34F37252A77C000386FDB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C9C32BC3252F65EE005F3280 /* Protocols */,
-				C9541B13252BA46400DC70B6 /* Seed */,
-				C9541B12252BA45000DC70B6 /* Repository */,
-				C9541B11252BA44300DC70B6 /* Models */,
+				C92F0B5D25311FB300F3262D /* Enums */,
+				C9F34F38252A77E500386FDB /* Employee.swift */,
+				C9DE5998252BA9960070DFC7 /* Animal.swift */,
+				C9A5E84A252C02D200220E9F /* Car.swift */,
+				C9C32BC0252F6211005F3280 /* Composer.swift */,
+				C93FC6332530030F00670A74 /* App.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -416,6 +407,7 @@
 		C9F34F44252A7CEA00386FDB /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C9541B14252BA4BA00DC70B6 /* Extensions */,
 				C9F34F28252A769600386FDB /* Main.storyboard */,
 				C9F34F26252A769600386FDB /* MainViewController.swift */,
 				C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */,

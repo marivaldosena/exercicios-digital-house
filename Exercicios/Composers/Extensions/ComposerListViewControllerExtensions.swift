@@ -38,7 +38,8 @@ extension ComposerListViewController {
     }
     
     func openWebEncyclopedia(term: String) {
-        let url = "\(K.WebBrowser.webEncyclopediaUrl)/w/index.php?search=\(term)"
+        let normalizedTerm = WebUtils.getNormalizeQueryParameters(queryParam: term)
+        let url = "\(K.WebBrowser.webEncyclopediaUrl)/w/index.php?search=\(normalizedTerm)"
         
         do {
             try WebUtils.openURL(url: url)
@@ -48,7 +49,8 @@ extension ComposerListViewController {
     }
     
     func openVideoStreamingPlatform(term: String) {
-        let url = "https://www.youtube.com/results?search_query=\(term)"
+        let normalizedTerm = WebUtils.getNormalizeQueryParameters(queryParam: term)
+        let url = "https://www.youtube.com/results?search_query=\(normalizedTerm)"
         
         do {
             try WebUtils.openURL(url: url)
@@ -75,10 +77,10 @@ extension ComposerListViewController {
                 self.goToComposerDetail()
             case webEncyclopediaImageView:
                 print("openWebEncyclopedia")
-                self.openWebEncyclopedia(term: selectedComposer?.name ?? "Classical+Music")
+                self.openWebEncyclopedia(term: selectedComposer?.name ?? "Classical Music")
             case videoStreamingPlatformImageView:
                 print("openVideoStreamingPlatform")
-                self.openVideoStreamingPlatform(term: selectedComposer?.name ?? "Classical+Music")
+                self.openVideoStreamingPlatform(term: selectedComposer?.name ?? "Classical Music")
             default:
                 break
             }

@@ -102,7 +102,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Composer Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvT-9q-ufx">
-                                <rect key="frame" x="5" y="404" width="404" height="24"/>
+                                <rect key="frame" x="5" y="389" width="404" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                             <constraint firstItem="rHA-zW-B2h" firstAttribute="top" secondItem="9fm-f6-T8j" secondAttribute="bottom" constant="15" id="EpD-xM-Yto"/>
                             <constraint firstItem="kzp-lI-BHa" firstAttribute="leading" secondItem="5iu-m0-f9f" secondAttribute="leading" id="Hsh-za-dUg"/>
                             <constraint firstItem="5iu-m0-f9f" firstAttribute="trailing" secondItem="rHA-zW-B2h" secondAttribute="trailing" id="Juy-aI-I2Y"/>
-                            <constraint firstItem="kzp-lI-BHa" firstAttribute="top" secondItem="MvT-9q-ufx" secondAttribute="bottom" constant="20" id="KSg-gI-DSN"/>
+                            <constraint firstItem="kzp-lI-BHa" firstAttribute="top" secondItem="MvT-9q-ufx" secondAttribute="bottom" constant="35" id="KSg-gI-DSN"/>
                             <constraint firstItem="5iu-m0-f9f" firstAttribute="trailing" secondItem="MvT-9q-ufx" secondAttribute="trailing" constant="5" id="Spi-iD-F3S"/>
                             <constraint firstItem="9fm-f6-T8j" firstAttribute="top" secondItem="5iu-m0-f9f" secondAttribute="top" constant="10" id="eoD-Xb-ALU"/>
                             <constraint firstItem="MvT-9q-ufx" firstAttribute="leading" secondItem="5iu-m0-f9f" secondAttribute="leading" constant="5" id="wj3-f3-bq6"/>
@@ -127,6 +127,7 @@
                     <navigationItem key="navigationItem" id="PPA-Gl-v3h"/>
                     <connections>
                         <outlet property="composerListCollectionView" destination="rHA-zW-B2h" id="pVa-Op-dgW"/>
+                        <outlet property="seeDetailsImageView" destination="6os-U6-lrO" id="imk-WQ-phO"/>
                         <outlet property="selectedComposerNameLabel" destination="MvT-9q-ufx" id="daR-Ey-nc4"/>
                         <outlet property="videoStreamingPlatformImageView" destination="8XB-bP-168" id="e7a-mc-8a5"/>
                         <outlet property="webEncyclopediaImageView" destination="mlg-vK-Rpx" id="1zR-GS-UkX"/>

@@ -21,7 +21,7 @@ struct WebUtils {
         }
     }
     
-    static func normalizeQueryParameters(queryParam: String) -> String {
+    static func getNormalizeQueryParameters(queryParam: String) -> String {
         var allowedQueryParamAndKey = NSCharacterSet.urlQueryAllowed
         allowedQueryParamAndKey.remove(charactersIn: ";/?:@&=+$, ")
         
