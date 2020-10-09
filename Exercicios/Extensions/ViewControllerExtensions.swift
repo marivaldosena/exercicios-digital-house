@@ -21,7 +21,7 @@ extension ViewController {
     }
     
     func goToCarList() {
-//        if let viewController = CarListViewController.getControllerView() {
+//        if let viewController = CarListViewController.getViewController() {
 //            if let parent = viewController.parent {
 //                present(parent, animated: true, completion: nil)
 //            }
@@ -30,5 +30,17 @@ extension ViewController {
         if let uiNavigationController = CarListViewController.getNavigationController() {
             present(uiNavigationController, animated: true, completion: nil)
         }
+    }
+    
+    func goToComposerList() {
+        if let viewController = ComposerListViewController.getViewController() {
+            if let parent = viewController.parent {
+                present(parent, animated: true, completion: nil)
+            }
+        }
+        
+//        if let uiNavigationController = PeopleListViewController.getNavigationController() {
+//            present(uiNavigationController, animated: true, completion: nil)
+//        }
     }
 }

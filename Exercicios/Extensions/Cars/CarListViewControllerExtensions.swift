@@ -17,7 +17,7 @@ extension CarListViewController {
         return uiNavigationController
     }
     
-    static func getControllerView() -> CarListViewController? {
+    static func getViewController() -> CarListViewController? {
         guard let uiNavigationController = CarListViewController.getNavigationController() else {
             return nil
         }
