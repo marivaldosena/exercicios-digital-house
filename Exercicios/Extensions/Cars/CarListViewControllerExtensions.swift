@@ -10,7 +10,7 @@ import UIKit
 //MARK: - CarListViewController
 extension CarListViewController {
     static func getNavigationController() -> UINavigationController? {
-        guard let uiNavigationController = UIStoryboard(name: K.ViewNames.carListName, bundle: nil).instantiateInitialViewController() as? UINavigationController else {
+        guard let uiNavigationController = UIStoryboard(name: K.ViewNames.Cars.carListName, bundle: nil).instantiateInitialViewController() as? UINavigationController else {
             return nil
         }
 

@@ -33,6 +33,14 @@ extension ComposerListViewController {
     func updateUIInterface() {
         composerListCollectionView?.reloadData()
     }
+    
+    func openWebEncyclopedia(term: String) {
+        let url = "\(K.WebBrowser.webEncyclopediaUrl)/results?search_query=\(term)"
+        
+        if let url = URL(string: url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
 
 //MARK: - ComposerListViewController: UICollectionViewDelegate

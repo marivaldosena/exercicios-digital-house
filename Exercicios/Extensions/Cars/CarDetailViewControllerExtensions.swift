@@ -9,7 +9,7 @@ import UIKit
 
 extension CarDetailViewController {
     static func getViewController() -> CarDetailViewController? {
-        if let viewController = UIStoryboard(name: K.ViewNames.carDetailName, bundle: nil).instantiateInitialViewController() as? CarDetailViewController {
+        if let viewController = UIStoryboard(name: K.ViewNames.Cars.carDetailName, bundle: nil).instantiateInitialViewController() as? CarDetailViewController {
             return viewController
         }
         

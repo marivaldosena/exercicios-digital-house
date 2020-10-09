@@ -10,7 +10,7 @@ import UIKit
 //MARK: - AnimalListViewController
 extension AnimalListViewController {
     static func getViewController() -> AnimalListViewController? {
-        if let viewController = UIStoryboard(name: K.ViewNames.animalListName, bundle: nil).instantiateInitialViewController() as? AnimalListViewController {
+        if let viewController = UIStoryboard(name: K.ViewNames.Animals.animalListName, bundle: nil).instantiateInitialViewController() as? AnimalListViewController {
             return viewController
         }
         
@@ -62,7 +62,7 @@ extension AnimalListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.ViewNames.animalCellName, for: indexPath) as! AnimalListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.ViewNames.Animals.animalCellName, for: indexPath) as! AnimalListTableViewCell
         
         let animal = self.getAnimalRepository().getAnimal(at: indexPath.row)
         

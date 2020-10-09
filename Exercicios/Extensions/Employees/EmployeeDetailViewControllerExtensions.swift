@@ -9,7 +9,7 @@ import UIKit
 
 extension EmployeeDetailViewController {
     static func getViewController() -> EmployeeDetailViewController? {
-        if let viewController = UIStoryboard(name: K.ViewNames.employeeDetailName, bundle: nil).instantiateInitialViewController() as? EmployeeDetailViewController {
+        if let viewController = UIStoryboard(name: K.ViewNames.Employees.employeeDetailName, bundle: nil).instantiateInitialViewController() as? EmployeeDetailViewController {
             return viewController
         }
         

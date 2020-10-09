@@ -9,7 +9,7 @@ import UIKit
 
 extension AnimalDetailViewController {
     static func getViewController() -> AnimalDetailViewController? {
-        if let viewController = UIStoryboard(name: K.ViewNames.animalDetailName, bundle: nil).instantiateInitialViewController() as? AnimalDetailViewController {
+        if let viewController = UIStoryboard(name: K.ViewNames.Animals.animalDetailName, bundle: nil).instantiateInitialViewController() as? AnimalDetailViewController {
             return viewController
         }
         

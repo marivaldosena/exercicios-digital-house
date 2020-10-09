@@ -12,6 +12,11 @@
 		C91348F5252F746700E8951F /* ComposerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91348F4252F746700E8951F /* ComposerListCollectionViewCell.swift */; };
 		C9134900252F76A100E8951F /* ComposerListViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91348FF252F76A100E8951F /* ComposerListViewControllerExtensions.swift */; };
 		C9134906252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9134905252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift */; };
+		C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */; };
+		C93FC6342530030F00670A74 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC6332530030F00670A74 /* App.swift */; };
+		C93FC63925300A1C00670A74 /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC63825300A1C00670A74 /* AppRepository.swift */; };
+		C93FC63D25300C1500670A74 /* AppListCollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC63C25300C1500670A74 /* AppListCollectionViewCellExtensions.swift */; };
+		C93FC64025300E1500670A74 /* AppSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC63F25300E1500670A74 /* AppSeed.swift */; };
 		C949A54B252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949A54A252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift */; };
 		C95BCE05252A8CC800B2E190 /* EmployeePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95BCE04252A8CC800B2E190 /* EmployeePosition.swift */; };
 		C95BCE08252A8F9B00B2E190 /* EmployeeSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95BCE07252A8F9B00B2E190 /* EmployeeSeed.swift */; };
@@ -36,7 +41,7 @@
 		C9DE5986252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE5985252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift */; };
 		C9DE5989252BA7E20070DFC7 /* EmployeeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE5988252BA7E20070DFC7 /* EmployeeExtensions.swift */; };
 		C9DE598C252BA83E0070DFC7 /* EmployeeDetailViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE598B252BA83E0070DFC7 /* EmployeeDetailViewControllerExtensions.swift */; };
-		C9DE598F252BA8B00070DFC7 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE598E252BA8B00070DFC7 /* ViewControllerExtensions.swift */; };
+		C9DE598F252BA8B00070DFC7 /* MainViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE598E252BA8B00070DFC7 /* MainViewControllerExtensions.swift */; };
 		C9DE5993252BA91E0070DFC7 /* AnimalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE5992252BA91E0070DFC7 /* AnimalListViewController.swift */; };
 		C9DE5996252BA9380070DFC7 /* AnimalList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9DE5995252BA9380070DFC7 /* AnimalList.storyboard */; };
 		C9DE5999252BA9960070DFC7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DE5998252BA9960070DFC7 /* Animal.swift */; };
@@ -49,7 +54,7 @@
 		C9F02D47252E27D200BFA062 /* CarDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F02D46252E27D200BFA062 /* CarDetail.storyboard */; };
 		C9F34F23252A769600386FDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F34F22252A769600386FDB /* AppDelegate.swift */; };
 		C9F34F25252A769600386FDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F34F24252A769600386FDB /* SceneDelegate.swift */; };
-		C9F34F27252A769600386FDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F34F26252A769600386FDB /* ViewController.swift */; };
+		C9F34F27252A769600386FDB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F34F26252A769600386FDB /* MainViewController.swift */; };
 		C9F34F2A252A769600386FDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F34F28252A769600386FDB /* Main.storyboard */; };
 		C9F34F2C252A769700386FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9F34F2B252A769700386FDB /* Assets.xcassets */; };
 		C9F34F2F252A769700386FDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F34F2D252A769700386FDB /* LaunchScreen.storyboard */; };
@@ -65,6 +70,11 @@
 		C91348F4252F746700E8951F /* ComposerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C91348FF252F76A100E8951F /* ComposerListViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C9134905252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListCollectionViewCellExtensions.swift; sourceTree = "<group>"; };
+		C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C93FC6332530030F00670A74 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		C93FC63825300A1C00670A74 /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
+		C93FC63C25300C1500670A74 /* AppListCollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCellExtensions.swift; sourceTree = "<group>"; };
+		C93FC63F25300E1500670A74 /* AppSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSeed.swift; sourceTree = "<group>"; };
 		C949A54A252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCollectionViewCellExtensions.swift; sourceTree = "<group>"; };
 		C95BCE04252A8CC800B2E190 /* EmployeePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeePosition.swift; sourceTree = "<group>"; };
 		C95BCE07252A8F9B00B2E190 /* EmployeeSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSeed.swift; sourceTree = "<group>"; };
@@ -89,7 +99,7 @@
 		C9DE5985252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C9DE5988252BA7E20070DFC7 /* EmployeeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeExtensions.swift; sourceTree = "<group>"; };
 		C9DE598B252BA83E0070DFC7 /* EmployeeDetailViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewControllerExtensions.swift; sourceTree = "<group>"; };
-		C9DE598E252BA8B00070DFC7 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		C9DE598E252BA8B00070DFC7 /* MainViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C9DE5992252BA91E0070DFC7 /* AnimalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListViewController.swift; sourceTree = "<group>"; };
 		C9DE5995252BA9380070DFC7 /* AnimalList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnimalList.storyboard; sourceTree = "<group>"; };
 		C9DE5998252BA9960070DFC7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -103,7 +113,7 @@
 		C9F34F1F252A769600386FDB /* Exercicios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercicios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9F34F22252A769600386FDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9F34F24252A769600386FDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C9F34F26252A769600386FDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9F34F26252A769600386FDB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C9F34F29252A769600386FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9F34F2B252A769700386FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9F34F2E252A769700386FDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -181,6 +191,15 @@
 			path = Composers;
 			sourceTree = "<group>";
 		};
+		C93FC63B25300BED00670A74 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C9DE598E252BA8B00070DFC7 /* MainViewControllerExtensions.swift */,
+				C93FC63C25300C1500670A74 /* AppListCollectionViewCellExtensions.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		C9541B11252BA44300DC70B6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +208,7 @@
 				C9DE5998252BA9960070DFC7 /* Animal.swift */,
 				C9A5E84A252C02D200220E9F /* Car.swift */,
 				C9C32BC0252F6211005F3280 /* Composer.swift */,
+				C93FC6332530030F00670A74 /* App.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +220,7 @@
 				C9DE599B252BB0B50070DFC7 /* AnimalRepository.swift */,
 				C9F02D37252DECE600BFA062 /* CarRepository.swift */,
 				C9C32BC7252F686C005F3280 /* ComposerRepository.swift */,
+				C93FC63825300A1C00670A74 /* AppRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -211,6 +232,7 @@
 				C9DE599E252BB8700070DFC7 /* AnimalSeed.swift */,
 				C9F02D3F252E247500BFA062 /* CarSeed.swift */,
 				C97D55C8252FA23D005F61C3 /* ComposerSeed.swift */,
+				C93FC63F25300E1500670A74 /* AppSeed.swift */,
 			);
 			path = Seed;
 			sourceTree = "<group>";
@@ -218,7 +240,7 @@
 		C9541B14252BA4BA00DC70B6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C9DE598E252BA8B00070DFC7 /* ViewControllerExtensions.swift */,
+				C93FC63B25300BED00670A74 /* Main */,
 				C91348FA252F75FC00E8951F /* Employees */,
 				C91348FC252F761500E8951F /* Animals */,
 				C91348FD252F762200E8951F /* Cars */,
@@ -370,7 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				C9F34F28252A769600386FDB /* Main.storyboard */,
-				C9F34F26252A769600386FDB /* ViewController.swift */,
+				C9F34F26252A769600386FDB /* MainViewController.swift */,
+				C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -456,6 +479,7 @@
 				C9C32BC5252F6602005F3280 /* RepositoryProtocol.swift in Sources */,
 				C9F34F42252A7B7A00386FDB /* EmployeeListViewController.swift in Sources */,
 				C9A5E84B252C02D200220E9F /* Car.swift in Sources */,
+				C93FC63D25300C1500670A74 /* AppListCollectionViewCellExtensions.swift in Sources */,
 				C95BCE05252A8CC800B2E190 /* EmployeePosition.swift in Sources */,
 				C91348ED252F72D400E8951F /* ComposerListViewController.swift in Sources */,
 				C9DE5993252BA91E0070DFC7 /* AnimalListViewController.swift in Sources */,
@@ -470,7 +494,7 @@
 				C9DE5986252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift in Sources */,
 				C9F02D44252E27B100BFA062 /* CarDetailViewController.swift in Sources */,
 				C97D55C9252FA23D005F61C3 /* ComposerSeed.swift in Sources */,
-				C9DE598F252BA8B00070DFC7 /* ViewControllerExtensions.swift in Sources */,
+				C9DE598F252BA8B00070DFC7 /* MainViewControllerExtensions.swift in Sources */,
 				C9C32BC1252F6211005F3280 /* Composer.swift in Sources */,
 				C9F34F49252A7EFD00386FDB /* EmployeeRepository.swift in Sources */,
 				C9DE5999252BA9960070DFC7 /* Animal.swift in Sources */,
@@ -480,14 +504,18 @@
 				C9134900252F76A100E8951F /* ComposerListViewControllerExtensions.swift in Sources */,
 				C9B53D2A252BF17E00571573 /* AnimalDetailViewController.swift in Sources */,
 				C9F02D40252E247500BFA062 /* CarSeed.swift in Sources */,
-				C9F34F27252A769600386FDB /* ViewController.swift in Sources */,
+				C9F34F27252A769600386FDB /* MainViewController.swift in Sources */,
 				C9DE59A8252BBE090070DFC7 /* K.swift in Sources */,
 				C9784CDB252E397100ED3CD4 /* CarListViewControllerExtensions.swift in Sources */,
 				C9F34F23252A769600386FDB /* AppDelegate.swift in Sources */,
 				C91348F5252F746700E8951F /* ComposerListCollectionViewCell.swift in Sources */,
+				C93FC6342530030F00670A74 /* App.swift in Sources */,
 				C9F34F39252A77E500386FDB /* Employee.swift in Sources */,
+				C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */,
+				C93FC64025300E1500670A74 /* AppSeed.swift in Sources */,
 				C9F02D38252DECE600BFA062 /* CarRepository.swift in Sources */,
 				C95BCE08252A8F9B00B2E190 /* EmployeeSeed.swift in Sources */,
+				C93FC63925300A1C00670A74 /* AppRepository.swift in Sources */,
 				C9784CDE252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift in Sources */,
 				C9C32BC8252F686C005F3280 /* ComposerRepository.swift in Sources */,
 				C9F34F25252A769600386FDB /* SceneDelegate.swift in Sources */,

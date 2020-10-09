@@ -10,7 +10,7 @@ import UIKit
 //MARK: - EmployeeListViewController
 extension EmployeeListViewController {
     static func getViewController() -> EmployeeListViewController? {
-        if let viewController = UIStoryboard(name: K.ViewNames.employeeListName, bundle: nil).instantiateInitialViewController() as? EmployeeListViewController {
+        if let viewController = UIStoryboard(name: K.ViewNames.Employees.employeeListName, bundle: nil).instantiateInitialViewController() as? EmployeeListViewController {
             return viewController
         }
         
@@ -49,7 +49,7 @@ extension EmployeeListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.ViewNames.employeeCellName, for: indexPath) as! EmployeeListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.ViewNames.Employees.employeeCellName, for: indexPath) as! EmployeeListTableViewCell
         
         var employee: Employee?
         

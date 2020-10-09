@@ -9,15 +9,28 @@ import Foundation
 
 struct K {
     struct ViewNames {
-        static let employeeListName = "EmployeeList"
-        static let employeeDetailName = "EmployeeDetail"
-        static let employeeCellName = "EmployeeListTableViewCell"
-        static let animalListName = "AnimalList"
-        static let animalDetailName = "AnimalDetail"
-        static let animalCellName = "AnimalListTableViewCell"
-        static let carListName = "CarList"
-        static let carDetailName = "CarDetail"
-        static let carCellName = "CarListCollectionViewCell"
+        struct Main {
+            static let appListCell = "AppListCollectionViewCell"
+        }
+        
+        struct Employees {
+            static let employeeListName = "EmployeeList"
+            static let employeeDetailName = "EmployeeDetail"
+            static let employeeCellName = "EmployeeListTableViewCell"
+        }
+        
+        struct Animals {
+            static let animalListName = "AnimalList"
+            static let animalDetailName = "AnimalDetail"
+            static let animalCellName = "AnimalListTableViewCell"
+        }
+        
+        struct Cars {
+            static let carListName = "CarList"
+            static let carDetailName = "CarDetail"
+            static let carCellName = "CarListCollectionViewCell"
+        }
+        
         
         struct Composers {
             static let peopleListName = "ComposerList"
@@ -83,5 +96,7 @@ struct K {
     struct WebBrowser {
         static let searchEngineUrl = "https://www.google.com"
         static let defaultSearchTerm = "Swift 5"
+        static let videoStreamingPlatformUrl = "https://www.youtube.com"
+        static let webEncyclopediaUrl = ""
     }
 }
