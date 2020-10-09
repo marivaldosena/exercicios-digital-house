@@ -12,6 +12,9 @@
 		C91348F5252F746700E8951F /* ComposerListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91348F4252F746700E8951F /* ComposerListCollectionViewCell.swift */; };
 		C9134900252F76A100E8951F /* ComposerListViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91348FF252F76A100E8951F /* ComposerListViewControllerExtensions.swift */; };
 		C9134906252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9134905252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift */; };
+		C92F0B522530E3D100F3262D /* WebUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F0B512530E3D100F3262D /* WebUtils.swift */; };
+		C92F0B5625310FF900F3262D /* ComposerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */; };
+		C92F0B592531109300F3262D /* ComposerDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92F0B582531109300F3262D /* ComposerDetail.storyboard */; };
 		C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */; };
 		C93FC6342530030F00670A74 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC6332530030F00670A74 /* App.swift */; };
 		C93FC63925300A1C00670A74 /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC63825300A1C00670A74 /* AppRepository.swift */; };
@@ -70,6 +73,9 @@
 		C91348F4252F746700E8951F /* ComposerListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C91348FF252F76A100E8951F /* ComposerListViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C9134905252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerListCollectionViewCellExtensions.swift; sourceTree = "<group>"; };
+		C92F0B512530E3D100F3262D /* WebUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUtils.swift; sourceTree = "<group>"; };
+		C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerDetailViewController.swift; sourceTree = "<group>"; };
+		C92F0B582531109300F3262D /* ComposerDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComposerDetail.storyboard; sourceTree = "<group>"; };
 		C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C93FC6332530030F00670A74 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		C93FC63825300A1C00670A74 /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		C91348EB252F72C100E8951F /* Composers */ = {
 			isa = PBXGroup;
 			children = (
+				C92F0B5425310FA700F3262D /* ComposerDetail */,
 				C91348F8252F74F100E8951F /* ComposerList */,
 			);
 			path = Composers;
@@ -189,6 +196,23 @@
 				C9134905252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		C92F0B502530E37600F3262D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C92F0B512530E3D100F3262D /* WebUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C92F0B5425310FA700F3262D /* ComposerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */,
+				C92F0B582531109300F3262D /* ComposerDetail.storyboard */,
+			);
+			path = ComposerDetail;
 			sourceTree = "<group>";
 		};
 		C93FC63B25300BED00670A74 /* Main */ = {
@@ -341,6 +365,7 @@
 		C9F34F21252A769600386FDB /* Exercicios */ = {
 			isa = PBXGroup;
 			children = (
+				C92F0B502530E37600F3262D /* Utils */,
 				C9541B14252BA4BA00DC70B6 /* Extensions */,
 				C9F34F37252A77C000386FDB /* Domain */,
 				C9F02D3A252E118200BFA062 /* Employees */,
@@ -464,6 +489,7 @@
 				C9B53D2F252BF1A400571573 /* AnimalDetail.storyboard in Resources */,
 				C91348F1252F738900E8951F /* ComposerList.storyboard in Resources */,
 				C9DE5996252BA9380070DFC7 /* AnimalList.storyboard in Resources */,
+				C92F0B592531109300F3262D /* ComposerDetail.storyboard in Resources */,
 				C9C6C1A8252ACA170011BA8F /* EmployeeDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,11 +538,13 @@
 				C93FC6342530030F00670A74 /* App.swift in Sources */,
 				C9F34F39252A77E500386FDB /* Employee.swift in Sources */,
 				C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */,
+				C92F0B5625310FF900F3262D /* ComposerDetailViewController.swift in Sources */,
 				C93FC64025300E1500670A74 /* AppSeed.swift in Sources */,
 				C9F02D38252DECE600BFA062 /* CarRepository.swift in Sources */,
 				C95BCE08252A8F9B00B2E190 /* EmployeeSeed.swift in Sources */,
 				C93FC63925300A1C00670A74 /* AppRepository.swift in Sources */,
 				C9784CDE252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift in Sources */,
+				C92F0B522530E3D100F3262D /* WebUtils.swift in Sources */,
 				C9C32BC8252F686C005F3280 /* ComposerRepository.swift in Sources */,
 				C9F34F25252A769600386FDB /* SceneDelegate.swift in Sources */,
 				C9C6C1A5252ACA040011BA8F /* EmployeeDetailViewController.swift in Sources */,

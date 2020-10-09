@@ -10,6 +10,7 @@ import Foundation
 class ComposerRepository: RepositoryProtocol {
     typealias T = Composer
     private var items: [Composer]
+    private var activeItem: Composer?
     
     init(collection: [Composer]) {
         self.items = collection
@@ -51,4 +52,11 @@ class ComposerRepository: RepositoryProtocol {
         return false
     }
     
+    func setActiveItem(item: Composer?) {
+        self.activeItem = item
+    }
+    
+    func getActiveItem() -> Composer? {
+        return self.activeItem
+    }
 }

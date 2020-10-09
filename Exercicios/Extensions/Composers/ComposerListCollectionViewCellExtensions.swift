@@ -15,20 +15,10 @@ extension ComposerListCollectionViewCell {
         return cell
     }
     
-    @IBInspectable var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        }
-        
-        set {
-            layer.cornerRadius = newValue
-        }
-    }
-    
     func setup(person: Composer?) {
         self.clearFields()
         
-        composerNameLabel?.text = person?.name
+        composerNameLabel?.text = person?.imageName
     }
     
     private func clearFields() {

@@ -21,8 +21,10 @@ extension AnimalDetailViewController {
     }
     
     func openWebBrowser(url: String) {
-        if let url = URL(string: url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        do {
+            try WebUtils.openURL(url: url)
+        } catch {
+            print("Error")
         }
     }
     

@@ -97,6 +97,6 @@ struct K {
         static let searchEngineUrl = "https://www.google.com"
         static let defaultSearchTerm = "Swift 5"
         static let videoStreamingPlatformUrl = "https://www.youtube.com"
-        static let webEncyclopediaUrl = ""
+        static let webEncyclopediaUrl = "https://en.wikipedia.org"
     }
 }

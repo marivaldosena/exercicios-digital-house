@@ -31,21 +31,84 @@ extension ComposerListViewController {
     }
     
     func updateUIInterface() {
+        let composer = self.getRepository().getActiveItem()
+        
+        selectedComposerNameLabel?.text = composer?.name
         composerListCollectionView?.reloadData()
     }
     
     func openWebEncyclopedia(term: String) {
-        let url = "\(K.WebBrowser.webEncyclopediaUrl)/results?search_query=\(term)"
+        let url = "\(K.WebBrowser.webEncyclopediaUrl)/w/index.php?search=\(term)"
         
-        if let url = URL(string: url) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        do {
+            try WebUtils.openURL(url: url)
+        } catch {
+            print("Error: \(error)")
         }
+    }
+    
+    func openVideoStreamingPlatform(term: String) {
+        let url = "https://www.youtube.com/results?search_query=\(term)"
+        
+        do {
+            try WebUtils.openURL(url: url)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
+    func goToRoot() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    private func goToComposerDetail() {
+        
+    }
+    
+    @objc private func gestureRecognizerHandler(handler: UITapGestureRecognizer) {
+        if let tappedImageView = handler.view as? UIImageView {
+            let selectedComposer = self.getRepository().getActiveItem()
+            
+            switch tappedImageView {
+            case seeDetailsImageView:
+                print("goToComposerDetail")
+                self.goToComposerDetail()
+            case webEncyclopediaImageView:
+                print("openWebEncyclopedia")
+                self.openWebEncyclopedia(term: selectedComposer?.name ?? "Classical+Music")
+            case videoStreamingPlatformImageView:
+                print("openVideoStreamingPlatform")
+                self.openVideoStreamingPlatform(term: selectedComposer?.name ?? "Classical+Music")
+            default:
+                break
+            }
+        }
+    }
+    
+    private func setGestureHandler(to sender: UIImageView?, _ gestureRecognizer: UITapGestureRecognizer) {
+        sender?.addGestureRecognizer(gestureRecognizer)
+        sender?.isUserInteractionEnabled = true
+    }
+    
+    private func getGestureRecognizer() -> UITapGestureRecognizer {
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.gestureRecognizerHandler(handler:)))
+        
+        return gestureRecognizer
+    }
+    
+    func addGestureHandlerToImages() {
+        self.setGestureHandler(to: webEncyclopediaImageView, self.getGestureRecognizer())
+        self.setGestureHandler(to: seeDetailsImageView, self.getGestureRecognizer())
+        self.setGestureHandler(to: videoStreamingPlatformImageView, self.getGestureRecognizer())
     }
 }
 
 //MARK: - ComposerListViewController: UICollectionViewDelegate
 extension ComposerListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let composer = self.getRepository().getItem(at: indexPath.row)
+        
+        self.getRepository().setActiveItem(item: composer)
         self.updateUIInterface()
     }
 }
