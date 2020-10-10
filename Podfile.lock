@@ -1,0 +1,16 @@
+PODS:
+  - SwiftSoup (2.3.2)
+
+DEPENDENCIES:
+  - SwiftSoup (~> 2.3)
+
+SPEC REPOS:
+  trunk:
+    - SwiftSoup
+
+SPEC CHECKSUMS:
+  SwiftSoup: f97bc4e988c7729d6457f9642f974c617a6e2510
+
+PODFILE CHECKSUM: 4ee94a5185a0965a1ff5dabf58b71e271414c5f2
+
+COCOAPODS: 1.9.3
