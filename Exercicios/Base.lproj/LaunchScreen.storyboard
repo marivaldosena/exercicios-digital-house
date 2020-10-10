@@ -16,18 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63M-ki-qDf">
-                                <rect key="frame" x="120.5" y="423" width="173" height="50.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="bottom" spacing="126" translatesAutoresizingMaskIntoConstraints="NO" id="wwx-0c-3EL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeg-2Z-mLt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="346"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Programmer" translatesAutoresizingMaskIntoConstraints="NO" id="Fv0-FY-i6N">
+                                                <rect key="frame" x="20" y="20" width="374" height="306"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Fv0-FY-i6N" firstAttribute="leading" secondItem="xeg-2Z-mLt" secondAttribute="leading" constant="20" id="7qy-GB-LQL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Fv0-FY-i6N" secondAttribute="bottom" constant="20" id="TQ4-8P-x9y"/>
+                                            <constraint firstItem="Fv0-FY-i6N" firstAttribute="top" secondItem="xeg-2Z-mLt" secondAttribute="top" constant="20" id="YCn-d4-Z2W"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fv0-FY-i6N" secondAttribute="trailing" constant="20" id="zPL-HT-KcL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-d5-u2x">
+                                        <rect key="frame" x="0.0" y="472" width="414" height="346"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63M-ki-qDf">
+                                                <rect key="frame" x="120.5" y="15" width="173" height="50.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="63M-ki-qDf" firstAttribute="centerX" secondItem="SQt-d5-u2x" secondAttribute="centerX" id="eyq-hh-aji"/>
+                                            <constraint firstItem="63M-ki-qDf" firstAttribute="top" secondItem="SQt-d5-u2x" secondAttribute="top" constant="15" id="leg-hk-XMW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SQt-d5-u2x" secondAttribute="bottom" id="7Wf-e7-K97"/>
+                                    <constraint firstItem="xeg-2Z-mLt" firstAttribute="leading" secondItem="wwx-0c-3EL" secondAttribute="leading" id="KKr-kH-5vD"/>
+                                    <constraint firstItem="xeg-2Z-mLt" firstAttribute="top" secondItem="wwx-0c-3EL" secondAttribute="top" id="WeP-vW-clh"/>
+                                    <constraint firstItem="SQt-d5-u2x" firstAttribute="leading" secondItem="wwx-0c-3EL" secondAttribute="leading" id="h11-PE-ql5"/>
+                                    <constraint firstAttribute="trailing" secondItem="SQt-d5-u2x" secondAttribute="trailing" id="zVQ-sL-1FV"/>
+                                    <constraint firstAttribute="trailing" secondItem="xeg-2Z-mLt" secondAttribute="trailing" id="zcN-lx-8Ey"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="63M-ki-qDf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TPH-dc-Q2l"/>
-                            <constraint firstItem="63M-ki-qDf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="g5s-I5-sHm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wwx-0c-3EL" secondAttribute="trailing" id="9gD-Oq-chS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wwx-0c-3EL" secondAttribute="bottom" id="TLJ-WP-KJL"/>
+                            <constraint firstItem="wwx-0c-3EL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dDf-T3-o3N"/>
+                            <constraint firstItem="wwx-0c-3EL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xDx-Hw-PM6"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +77,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Programmer" width="555.49761962890625" height="655.73046875"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

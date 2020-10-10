@@ -29,6 +29,10 @@
 		C9784CD8252E35BE00ED3CD4 /* CarListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9784CD7252E35BE00ED3CD4 /* CarListCollectionViewCell.swift */; };
 		C9784CDB252E397100ED3CD4 /* CarListViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9784CDA252E397100ED3CD4 /* CarListViewControllerExtensions.swift */; };
 		C9784CDE252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9784CDD252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift */; };
+		C97B48D5253124390008EA61 /* DeleteUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B48D4253124390008EA61 /* DeleteUIButton.swift */; };
+		C97B48D8253128650008EA61 /* ComposerDetailViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B48D7253128650008EA61 /* ComposerDetailViewControllerExtensions.swift */; };
+		C97B48DB253129070008EA61 /* UIStoryboardNavigableViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B48DA253129070008EA61 /* UIStoryboardNavigableViewControllerProtocol.swift */; };
+		C97B48DF25312C600008EA61 /* GenericCustomCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B48DE25312C600008EA61 /* GenericCustomCellProtocol.swift */; };
 		C97D55C9252FA23D005F61C3 /* ComposerSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D55C8252FA23D005F61C3 /* ComposerSeed.swift */; };
 		C9A5E843252C027500220E9F /* CarList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9A5E842252C027500220E9F /* CarList.storyboard */; };
 		C9A5E848252C029900220E9F /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5E847252C029900220E9F /* CarListViewController.swift */; };
@@ -90,6 +94,10 @@
 		C9784CD7252E35BE00ED3CD4 /* CarListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C9784CDA252E397100ED3CD4 /* CarListViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewControllerExtensions.swift; sourceTree = "<group>"; };
 		C9784CDD252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailViewControllerExtensions.swift; sourceTree = "<group>"; };
+		C97B48D4253124390008EA61 /* DeleteUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUIButton.swift; sourceTree = "<group>"; };
+		C97B48D7253128650008EA61 /* ComposerDetailViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerDetailViewControllerExtensions.swift; sourceTree = "<group>"; };
+		C97B48DA253129070008EA61 /* UIStoryboardNavigableViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardNavigableViewControllerProtocol.swift; sourceTree = "<group>"; };
+		C97B48DE25312C600008EA61 /* GenericCustomCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCustomCellProtocol.swift; sourceTree = "<group>"; };
 		C97D55C8252FA23D005F61C3 /* ComposerSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerSeed.swift; sourceTree = "<group>"; };
 		C9A5E842252C027500220E9F /* CarList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarList.storyboard; sourceTree = "<group>"; };
 		C9A5E847252C029900220E9F /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 			children = (
 				C91348FF252F76A100E8951F /* ComposerListViewControllerExtensions.swift */,
 				C9134905252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift */,
+				C97B48D7253128650008EA61 /* ComposerDetailViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 			children = (
 				C92F0B582531109300F3262D /* ComposerDetail.storyboard */,
 				C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */,
+				C97B48D4253124390008EA61 /* DeleteUIButton.swift */,
 			);
 			path = ComposerDetail;
 			sourceTree = "<group>";
@@ -280,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				C9C32BC4252F6602005F3280 /* RepositoryProtocol.swift */,
+				C97B48DA253129070008EA61 /* UIStoryboardNavigableViewControllerProtocol.swift */,
+				C97B48DE25312C600008EA61 /* GenericCustomCellProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -493,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97B48DF25312C600008EA61 /* GenericCustomCellProtocol.swift in Sources */,
 				C967EAB1252BCA46002DDE2F /* AnimalListTableViewCell.swift in Sources */,
 				C9C32BC5252F6602005F3280 /* RepositoryProtocol.swift in Sources */,
 				C9F34F42252A7B7A00386FDB /* EmployeeListViewController.swift in Sources */,
@@ -511,6 +524,7 @@
 				C9DE598C252BA83E0070DFC7 /* EmployeeDetailViewControllerExtensions.swift in Sources */,
 				C9DE5986252BA5C70070DFC7 /* EmployeeListViewControllerExtensions.swift in Sources */,
 				C9F02D44252E27B100BFA062 /* CarDetailViewController.swift in Sources */,
+				C97B48D8253128650008EA61 /* ComposerDetailViewControllerExtensions.swift in Sources */,
 				C97D55C9252FA23D005F61C3 /* ComposerSeed.swift in Sources */,
 				C9DE598F252BA8B00070DFC7 /* MainViewControllerExtensions.swift in Sources */,
 				C9C32BC1252F6211005F3280 /* Composer.swift in Sources */,
@@ -521,6 +535,7 @@
 				C949A54B252E47A0000F1A4B /* CarListCollectionViewCellExtensions.swift in Sources */,
 				C9134900252F76A100E8951F /* ComposerListViewControllerExtensions.swift in Sources */,
 				C9B53D2A252BF17E00571573 /* AnimalDetailViewController.swift in Sources */,
+				C97B48D5253124390008EA61 /* DeleteUIButton.swift in Sources */,
 				C9F02D40252E247500BFA062 /* CarSeed.swift in Sources */,
 				C9F34F27252A769600386FDB /* MainViewController.swift in Sources */,
 				C9DE59A8252BBE090070DFC7 /* K.swift in Sources */,
@@ -535,6 +550,7 @@
 				C9F02D38252DECE600BFA062 /* CarRepository.swift in Sources */,
 				C95BCE08252A8F9B00B2E190 /* EmployeeSeed.swift in Sources */,
 				C93FC63925300A1C00670A74 /* AppRepository.swift in Sources */,
+				C97B48DB253129070008EA61 /* UIStoryboardNavigableViewControllerProtocol.swift in Sources */,
 				C9784CDE252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift in Sources */,
 				C92F0B522530E3D100F3262D /* WebUtils.swift in Sources */,
 				C9C32BC8252F686C005F3280 /* ComposerRepository.swift in Sources */,

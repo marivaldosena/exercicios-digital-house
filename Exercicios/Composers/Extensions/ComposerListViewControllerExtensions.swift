@@ -11,7 +11,7 @@ import UIKit
 //MARK: - ComposerListViewController
 extension ComposerListViewController {
     static func getNavigationController() -> UINavigationController? {
-        if let uiNavigationController = UIStoryboard(name: K.ViewNames.Composers.peopleListName, bundle: nil).instantiateInitialViewController() as? UINavigationController {
+        if let uiNavigationController = UIStoryboard(name: K.ViewNames.Composers.composerListName, bundle: nil).instantiateInitialViewController() as? UINavigationController {
             return uiNavigationController
         }
         
@@ -33,8 +33,12 @@ extension ComposerListViewController {
     func updateUIInterface() {
         let composer = self.getRepository().getActiveItem()
         
-        selectedComposerNameLabel?.text = composer?.name
-        composerListCollectionView?.reloadData()
+        if let composer = composer {
+            selectedComposerNameLabel?.text = composer.name
+            composerListCollectionView?.reloadData()
+        } else {
+            seeDetailsImageView?.isHidden = false
+        }
     }
     
     func openWebEncyclopedia(term: String) {
@@ -64,7 +68,11 @@ extension ComposerListViewController {
     }
     
     private func goToComposerDetail() {
-        
+        if let viewController = ComposerDetailViewController.getViewController() {
+            let repository = self.getRepository()
+            viewController.setRepository(repository: repository)
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
     
     @objc private func gestureRecognizerHandler(handler: UITapGestureRecognizer) {
@@ -73,13 +81,10 @@ extension ComposerListViewController {
             
             switch tappedImageView {
             case seeDetailsImageView:
-                print("goToComposerDetail")
                 self.goToComposerDetail()
             case webEncyclopediaImageView:
-                print("openWebEncyclopedia")
                 self.openWebEncyclopedia(term: selectedComposer?.name ?? "Classical Music")
             case videoStreamingPlatformImageView:
-                print("openVideoStreamingPlatform")
                 self.openVideoStreamingPlatform(term: selectedComposer?.name ?? "Classical Music")
             default:
                 break
@@ -124,7 +129,7 @@ extension ComposerListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = ComposerListCollectionViewCell.getCellInstance(collectionView, indexPath)
         let person = self.getRepository().getItem(at: indexPath.row)
-        cell.setup(person: person)
+        cell.setup(item: person)
         
         return cell
     }

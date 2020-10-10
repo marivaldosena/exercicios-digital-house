@@ -33,9 +33,9 @@ struct K {
         
         
         struct Composers {
-            static let peopleListName = "ComposerList"
-            static let peopleDetailName = "ComposerDetail"
-            static let peopleCellName = "ComposerListCollectionViewCell"
+            static let composerListName = "ComposerList"
+            static let composerDetailName = "ComposerDetail"
+            static let composerCellName = "ComposerListCollectionViewCell"
         }
     }
     

@@ -8,20 +8,23 @@
 import Foundation
 import UIKit
 
-extension ComposerListCollectionViewCell {
+extension ComposerListCollectionViewCell: CustomUICollectionCellProtocol {
+    typealias T = ComposerListCollectionViewCell
+    typealias I = Composer
+    
     static func getCellInstance(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> ComposerListCollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ViewNames.Composers.peopleCellName, for: indexPath) as! ComposerListCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.ViewNames.Composers.composerCellName, for: indexPath) as! T
         
         return cell
     }
-    
-    func setup(person: Composer?) {
+
+    func setup(item: I?) {
         self.clearFields()
-        
-        composerNameLabel?.text = person?.imageName
+
+        composerNameLabel?.text = item?.imageName
     }
-    
-    private func clearFields() {
+
+    func clearFields() {
         composerNameLabel?.text = ""
     }
 }
