@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: - Composer
 struct Composer {
     var name: String
     var imageName: String?
@@ -28,5 +29,16 @@ struct Composer {
         self.birthDate = birthDate
         self.deathDate = deathDate
         self.profileDescription = profileDescription
+    }
+}
+
+//MARK: - Composer: Hashable
+extension Composer: Hashable {
+    static func ==(lhs: Composer, rhs: Composer) -> Bool {
+        let isEqual = lhs.name == rhs.name &&
+            lhs.birthDate == rhs.birthDate &&
+            lhs.deathDate == rhs.deathDate
+        
+        return isEqual
     }
 }

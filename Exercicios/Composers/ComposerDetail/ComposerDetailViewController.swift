@@ -13,6 +13,7 @@ class ComposerDetailViewController: UIViewController {
     @IBOutlet weak var composerDeathDateLabel: UILabel?
     @IBOutlet weak var composerImageView: UIImageView?
     @IBOutlet weak var composerProfileDescriptionTextView: UITextView?
+    @IBOutlet weak var deleteButton: DeleteUIButton?
     
     private var repository: ComposerRepository?
         
@@ -22,14 +23,7 @@ class ComposerDetailViewController: UIViewController {
     }
     
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Delete Composer", message: "Do you really want to delete this composer?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-            print(action.style)
-        }))
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (action) in
-            print(action.style)
-        }))
-        present(alert, animated: true, completion: nil)
+        self.deleteComposer(self.getRepository()?.getActiveItem())
     }
     
     func setRepository(repository: ComposerRepository) {

@@ -21,11 +21,44 @@ extension ComposerDetailViewController: UIStoryboardNavigableViewControllerProto
     
     func updateUIInterface() {
         if let composer = self.getRepository()?.getActiveItem() {
+            deleteButton?.roundCorners(corners: [.topRight, .bottomLeft], radius: 40)
+            
             composerNameLabel?.text = composer.name
             composerImageView?.image = UIImage(named: composer.imageName ?? "")
             composerBirthDateLabel?.text = "Birth: \(composer.birthDate ?? 0)"
             composerDeathDateLabel?.text = "Death:  \(composer.deathDate ?? 0)"
             composerProfileDescriptionTextView?.text = composer.profileDescription
+        }
+    }
+    
+    func deleteComposer(_ composer: Composer?) {
+        askUserForDeletion()
+    }
+    
+    private func askUserForDeletion() {
+        DispatchQueue.main.async {
+            let alert = AlertUtils.getAlertInstance(title: "Delete Composer", message: "Do you want to delete this composer permanently?", style: .alert)
+            
+            AlertUtils.addAction(alert, title: "Cancel", style: .cancel, handler: nil)
+            AlertUtils.addAction(alert, title: "Sure. Why not?", style: .destructive, handler: { (action) in
+                if action.style == .destructive {
+                    self.deleteComposerPermanently()
+                }
+            })
+            AlertUtils.showAlert(self, alert, animated: true, completion: nil)
+        }
+    }
+    
+    private func deleteComposerPermanently() {
+        if let composer = self.getRepository()?.getActiveItem() {
+            DispatchQueue.main.async {
+                let alert = AlertUtils.getAlertInstance(title: "Composer Deleted", message: "The Classic Music lost \(composer.name) today! Again.", style: .alert)
+                AlertUtils.addAction(alert, title: "OK", style: .default, handler: nil)
+                AlertUtils.showAlert(self, alert, animated: true, completion: nil)
+            }
+            self.getRepository()?.setActiveItem(item: nil)
+            self.getRepository()?.delete(item: composer)
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 }

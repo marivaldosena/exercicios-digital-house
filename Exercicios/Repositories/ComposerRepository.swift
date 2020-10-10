@@ -59,4 +59,24 @@ class ComposerRepository: RepositoryProtocol {
     func getActiveItem() -> Composer? {
         return self.activeItem
     }
+    
+    func delete(item: Composer) {
+        self.items = self.items.filter{ $0 != item }
+    }
+    
+    func delete(item: Composer?) {
+        if let item = item {
+            self.delete(item: item)
+        }
+    }
+    
+    func delete(item: Composer, callback: () -> Void) {
+        self.delete(item: item)
+        callback()
+    }
+    
+    func delete(item: Composer?, callback: () -> Void) {
+        self.delete(item: item)
+        callback()
+    }
 }

@@ -32,12 +32,13 @@ extension ComposerListViewController {
     
     func updateUIInterface() {
         let composer = self.getRepository().getActiveItem()
+        composerListCollectionView?.reloadData()
         
         if let composer = composer {
-            selectedComposerNameLabel?.text = composer.name
-            composerListCollectionView?.reloadData()
-        } else {
             seeDetailsImageView?.isHidden = false
+            selectedComposerNameLabel?.text = composer.name
+        } else {
+            seeDetailsImageView?.isHidden = true
         }
     }
     

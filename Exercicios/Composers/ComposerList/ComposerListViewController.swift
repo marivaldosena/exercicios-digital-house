@@ -27,6 +27,12 @@ class ComposerListViewController: UIViewController {
         composerListCollectionView?.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.updateUIInterface()
+    }
+    
     @IBAction func goToRoot(_ sender: UIButton) {
         self.goToRoot()
     }
