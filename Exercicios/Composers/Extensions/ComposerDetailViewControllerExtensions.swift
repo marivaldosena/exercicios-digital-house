@@ -21,6 +21,8 @@ extension ComposerDetailViewController: UIStoryboardNavigableViewControllerProto
     
     func updateUIInterface() {
         if let composer = self.getRepository()?.getActiveItem() {
+            self.title = composer.name
+            
             deleteButton?.roundCorners(corners: [.topRight, .bottomLeft], radius: 40)
             
             composerNameLabel?.text = composer.name

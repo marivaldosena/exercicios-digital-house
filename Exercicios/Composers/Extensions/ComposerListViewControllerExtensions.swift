@@ -72,6 +72,7 @@ extension ComposerListViewController {
         if let viewController = ComposerDetailViewController.getViewController() {
             let repository = self.getRepository()
             viewController.setRepository(repository: repository)
+            
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
