@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="PeopleListTableViewCell" customModule="Exercicios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="286" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="PeopleListTableViewCell" customModule="Exercicios" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="286" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ubR-VY-qcr">
+                        <rect key="frame" x="5" y="5" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="UhB-a4-q5C"/>
+                            <constraint firstAttribute="width" constant="80" id="vEA-Ar-Jmx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVw-mW-bQg">
+                        <rect key="frame" x="95" y="5" width="186" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Url" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPG-nW-NJu">
+                        <rect key="frame" x="90" y="34" width="191" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ubR-VY-qcr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="2BV-Gp-jpt"/>
+                    <constraint firstItem="DPG-nW-NJu" firstAttribute="top" secondItem="dVw-mW-bQg" secondAttribute="bottom" constant="5" id="55p-E3-R1x"/>
+                    <constraint firstAttribute="trailing" secondItem="DPG-nW-NJu" secondAttribute="trailing" constant="5" id="MMx-an-uxt"/>
+                    <constraint firstAttribute="bottom" secondItem="ubR-VY-qcr" secondAttribute="bottom" constant="5" id="ORV-Cb-QdQ"/>
+                    <constraint firstItem="dVw-mW-bQg" firstAttribute="leading" secondItem="ubR-VY-qcr" secondAttribute="trailing" constant="10" id="Rwm-mq-kLO"/>
+                    <constraint firstAttribute="trailing" secondItem="dVw-mW-bQg" secondAttribute="trailing" constant="5" id="kWP-bT-wMc"/>
+                    <constraint firstItem="DPG-nW-NJu" firstAttribute="leading" secondItem="ubR-VY-qcr" secondAttribute="trailing" constant="5" id="kjW-FR-ePW"/>
+                    <constraint firstItem="ubR-VY-qcr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ntD-fu-YA5"/>
+                    <constraint firstItem="dVw-mW-bQg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="oNn-sC-kPH"/>
+                    <constraint firstAttribute="bottom" secondItem="dVw-mW-bQg" secondAttribute="bottom" constant="5" id="yXl-US-YO5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="personImageView" destination="ubR-VY-qcr" id="f9K-PP-8j9"/>
+                <outlet property="personNameLabel" destination="dVw-mW-bQg" id="ZUJ-GL-TXv"/>
+                <outlet property="profileUrlLabel" destination="DPG-nW-NJu" id="OA6-Ue-5GB"/>
+            </connections>
+            <point key="canvasLocation" x="113.04347826086958" y="175.78125"/>
+        </tableViewCell>
+    </objects>
+</document>

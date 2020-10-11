@@ -37,6 +37,12 @@ struct K {
             static let composerDetailName = "ComposerDetail"
             static let composerCellName = "ComposerListCollectionViewCell"
         }
+        
+        struct Developers {
+            static let peopleListName = "PeopleList"
+            static let developerDetailName = "DeveloperDetail"
+            static let peopleCellName = "PeopleListTableViewCell"
+        }
     }
     
     struct Images {
@@ -90,6 +96,10 @@ struct K {
             static let verdiImageName = "Verdi"
             static let vivaldiImageName = "Vivaldi"
             static let wagnerImageName = "Wagner"
+        }
+        
+        struct Developers {
+            static let fallBackImageName = "person.crop.circle.badge.exclamationmark"
         }
     }
     

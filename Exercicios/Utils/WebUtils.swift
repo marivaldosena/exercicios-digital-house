@@ -29,4 +29,34 @@ struct WebUtils {
         
         return normalizedQueryParam ?? ""
     }
+    
+    static func getImage(imageUrl: String, fallbackImageName: String) -> UIImage? {
+        var image: UIImage? = UIImage(named: fallbackImageName)
+        let url = URL(string: imageUrl)
+        let session = URLSession(configuration: .default)
+        
+
+        if let url = url {
+            let downloadImageTask = session.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                } else {
+                    if let response = response as? HTTPURLResponse {
+                        print("Error: \(response.statusCode) status code.")
+                    } else {
+                        guard let data = data else {
+                            print("Error on loading image")
+                            return
+                        }
+                        
+                        image = UIImage(data: data)
+                    }
+                }
+            }
+            
+            downloadImageTask.resume()
+        }
+        
+        return image
+    }
 }
