@@ -273,6 +273,13 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		C93A1D632532AAAB00E1A287 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Serializers;
+			sourceTree = "<group>";
+		};
 		C9541B12252BA45000DC70B6 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +466,7 @@
 		C9F34F21252A769600386FDB /* Exercicios */ = {
 			isa = PBXGroup;
 			children = (
+				C93A1D632532AAAB00E1A287 /* Serializers */,
 				C92F0B502530E37600F3262D /* Utils */,
 				C99CAD602532653700B05C5F /* Services */,
 				C9541B12252BA45000DC70B6 /* Repositories */,

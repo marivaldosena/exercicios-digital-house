@@ -109,4 +109,12 @@ struct K {
         static let videoStreamingPlatformUrl = "https://www.youtube.com"
         static let webEncyclopediaUrl = "https://en.wikipedia.org"
     }
+    
+    struct API {
+        struct Developers {
+            static let githubUrl = "https://commits.top/worldwide.html"
+            static let mostActiveGithubUsersRankingUrl = "https://commits.top/worldwide.html"
+            static let stackOverFlowMostActiveUsersRankingUrl = "https://stackoverflow.com/tags/list/topusers"
+        }
+    }
 }

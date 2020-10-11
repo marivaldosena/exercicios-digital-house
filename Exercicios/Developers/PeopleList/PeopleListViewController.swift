@@ -19,6 +19,9 @@ class PeopleListViewController: UIViewController {
         peopleTableView.delegate = self
         peopleTableView.dataSource = self
         
+        let downloadTask = WebUtils.getDownloadDataTask(url: "https://stackoverflow.com/tags/list/topusers",  downloadHandler: self.downloadHandler)
+        downloadTask?.resume()
+        
         self.updateUIInterface()
     }
     
@@ -28,6 +31,19 @@ class PeopleListViewController: UIViewController {
     
     func setRepository(repository: PeopleRepository) {
         self.repository = repository
+    }
+    
+    private func downloadHandler(data: Data?, response: URLResponse?, error: Error?) -> Void {
+        if let error = error {
+            print("Error: \(error)")
+        } else {
+            if let response = response as? HTTPURLResponse {
+                if let data = data {
+                    print("Gotcha data!")
+                    print(data)
+                }
+            }
+        }
     }
 }
 

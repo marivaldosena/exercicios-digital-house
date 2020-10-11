@@ -59,4 +59,54 @@ struct WebUtils {
         
         return image
     }
+    
+    static func getDownloadDataTask(url: String, downloadHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask? {
+        let urlInstance = URL(string: url)
+        let session = URLSession(configuration: .default)
+        
+        if let urlInstance = urlInstance {
+            let downloadTask = session.dataTask(with: urlInstance, completionHandler: downloadHandler)
+            
+            return downloadTask
+        }
+        
+        return nil
+    }
+    
+    static func getContent(url: String) -> Data? {
+        var downloadedData: Data? = nil
+        
+        func handleData(url: String) -> Data? {
+            DispatchQueue.main.async {
+                let downloadTask = getDownloadDataTask(url: url) { (data, response, error) in
+                    handleErrors(error: error)
+                    if getResponseInstance(response: response) != nil {
+                        if let data = data {
+                            downloadedData = data
+                        }
+                    }
+                }
+                downloadTask?.resume()
+            }
+            return downloadedData
+        }
+        
+        downloadedData = handleData(url: url)
+        
+        return downloadedData
+    }
+    
+    private static func handleErrors(error: Error?) {
+        if let error = error {
+            print("Error: \(error)")
+        }
+    }
+    
+    private static func getResponseInstance(response: URLResponse?) -> HTTPURLResponse? {
+        guard let response = response as? HTTPURLResponse else {
+            return nil
+        }
+        
+        return response
+    }
 }
