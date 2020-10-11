@@ -13,7 +13,7 @@ extension PeopleListViewController: UIStoryboardNavigableViewControllerProtocol 
     typealias T = PeopleListViewController
     
     static func getViewController() -> PeopleListViewController? {
-        guard let viewController = UIStoryboard(name: K.ViewNames.Developers.peopleListName, bundle: nil).instantiateViewController(identifier: K.ViewNames.Developers.peopleListName) as? T else {
+        guard let viewController = UIStoryboard(name: K.ViewNames.Developers.peopleListName, bundle: nil).instantiateInitialViewController() as? T else {
             return nil
         }
         
