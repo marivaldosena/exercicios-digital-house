@@ -19,6 +19,8 @@ extension MainViewController {
             self.goToEmployeesList()
         case "Composers":
             self.goToComposerList()
+        case "Developers":
+            self.goToPeopleList()
         default:
             break
         }
@@ -58,6 +60,14 @@ extension MainViewController {
 //        if let uiNavigationController = PeopleListViewController.getNavigationController() {
 //            present(uiNavigationController, animated: true, completion: nil)
 //        }
+    }
+    
+    func goToPeopleList() {
+        guard let viewController = PeopleListViewController.getViewController() else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

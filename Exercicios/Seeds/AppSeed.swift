@@ -13,6 +13,7 @@ struct AppSeed {
         App(appName: "Cars", description: "Cars List Lorem Ipsum Blah Blah Blah"),
         App(appName: "Animals", description: "Animals List Lorem Ipsum Blah Blah Blah"),
         App(appName: "Composers", description: "Composers List Lorem Ipsum Blah Blah Blah"),
+        App(appName: "Developers", description: "Segmented Control and URLSession examples")
     ]
     
     static func seed() -> [App] {
