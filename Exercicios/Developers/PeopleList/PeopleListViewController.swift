@@ -10,9 +10,11 @@ import UIKit
 class PeopleListViewController: UIViewController {
     @IBOutlet weak var optionsSegmentedButton: UISegmentedControl!
     @IBOutlet weak var peopleTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     private var repository = PeopleRepository()
     private var service = PeopleService()
+    private var filteredOption: Int = PeopleTableVisibilityOption.all
     
     private var filteredList = [Person]()
 
@@ -23,6 +25,8 @@ class PeopleListViewController: UIViewController {
 
         peopleTableView.delegate = self
         peopleTableView.dataSource = self
+        
+        searchBar.delegate = self
         
         self.downloadData()
         
@@ -55,6 +59,14 @@ class PeopleListViewController: UIViewController {
     
     func setFilteredList(_ collection: [Person]) {
         self.filteredList = collection
+    }
+    
+    func getFilteredOption() -> Int {
+        return self.filteredOption
+    }
+    
+    func setFilteredOption(option: Int) {
+        self.filteredOption = option
     }
 }
 

@@ -19,6 +19,8 @@
 		C93A1D662533D94000E1A287 /* StackOverFlowProfileSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D652533D94000E1A287 /* StackOverFlowProfileSerializer.swift */; };
 		C93A1D782534B99300E1A287 /* GithubProfileSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D772534B99200E1A287 /* GithubProfileSerializer.swift */; };
 		C93A1D7B2534C82D00E1A287 /* PeopleTableVisibilityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */; };
+		C93A1D7E2534EB7B00E1A287 /* DeveloperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D7D2534EB7A00E1A287 /* DeveloperDetailViewController.swift */; };
+		C93A1D812534EC3900E1A287 /* DeveloperDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93A1D802534EC3900E1A287 /* DeveloperDetail.storyboard */; };
 		C93BF863253206780099946B /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93BF862253206780099946B /* AlertUtils.swift */; };
 		C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */; };
 		C93FC6342530030F00670A74 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC6332530030F00670A74 /* App.swift */; };
@@ -102,6 +104,8 @@
 		C93A1D652533D94000E1A287 /* StackOverFlowProfileSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverFlowProfileSerializer.swift; sourceTree = "<group>"; };
 		C93A1D772534B99200E1A287 /* GithubProfileSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProfileSerializer.swift; sourceTree = "<group>"; };
 		C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableVisibilityOption.swift; sourceTree = "<group>"; };
+		C93A1D7D2534EB7A00E1A287 /* DeveloperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDetailViewController.swift; sourceTree = "<group>"; };
+		C93A1D802534EC3900E1A287 /* DeveloperDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperDetail.storyboard; sourceTree = "<group>"; };
 		C93BF862253206780099946B /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C93FC6332530030F00670A74 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 		C99CAD7D2532807E00B05C5F /* DeveloperDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C93A1D802534EC3900E1A287 /* DeveloperDetail.storyboard */,
+				C93A1D7D2534EB7A00E1A287 /* DeveloperDetailViewController.swift */,
 			);
 			path = DeveloperDetail;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A1D812534EC3900E1A287 /* DeveloperDetail.storyboard in Resources */,
 				C99CAD762532698B00B05C5F /* PeopleListTableViewCell.xib in Resources */,
 				C9F34F2F252A769700386FDB /* LaunchScreen.storyboard in Resources */,
 				C9F34F2C252A769700386FDB /* Assets.xcassets in Resources */,
@@ -724,6 +731,7 @@
 				C9F34F39252A77E500386FDB /* Employee.swift in Sources */,
 				C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */,
 				C99CAD582532605D00B05C5F /* Person.swift in Sources */,
+				C93A1D7E2534EB7B00E1A287 /* DeveloperDetailViewController.swift in Sources */,
 				C99CAD6C2532672B00B05C5F /* PeopleListViewController.swift in Sources */,
 				C92F0B5625310FF900F3262D /* ComposerDetailViewController.swift in Sources */,
 				C93FC64025300E1500670A74 /* AppSeed.swift in Sources */,

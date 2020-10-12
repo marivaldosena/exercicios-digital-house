@@ -95,23 +95,32 @@ extension PeopleListViewController: UIStoryboardNavigableViewControllerProtocol 
     }
     
     private func showOnlyDevelopersInPeopleList() {
-        let filteredList = self.getRepository().getAll().filter{ (item) in
-            return item is Developer
-        }
+        let filteredList = self.getAllDevelopers()
         
+        self.setFilteredOption(option: PeopleTableVisibilityOption.onlyDevelopers)
         self.updatePeopleTable(filteredList)
     }
     
     private func showOnlyLaypeopleInPeopleList() {
-        let filteredList = self.getRepository().getAll().filter{ !($0 is Developer) }
+        let filteredList = self.getAllLaypeople()
         
+        self.setFilteredOption(option: PeopleTableVisibilityOption.onlyLaypeople)
         self.updatePeopleTable(filteredList)
     }
     
     private func showAllInPeopleList() {
         let filteredList = self.getRepository().getAll()
         
+        self.setFilteredOption(option: PeopleTableVisibilityOption.all)
         self.updatePeopleTable(filteredList)
+    }
+    
+    private func getAllLaypeople() -> [Person] {
+        return self.getRepository().getAll().filter{ !($0 is Developer) }
+    }
+    
+    private func getAllDevelopers() -> [Person] {
+        return self.getRepository().getAll().filter { $0 is Developer }
     }
 }
 
@@ -131,5 +140,70 @@ extension PeopleListViewController: UITableViewDataSource {
         let person = try? self.getFilteredList()[indexPath.row]
         cell.setup(item: person)
         return cell
+    }
+}
+
+extension PeopleListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let term = searchBar.text else {
+            return
+        }
+        
+        self.doSearch(term: term)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let term = searchBar.text else {
+            return
+        }
+        
+        self.doSearch(term: term)
+    }
+    
+    private func doSearch(term: String) {
+        let option = self.getFilteredOption()
+        var newList: [Person] = []
+        
+        switch option {
+        case PeopleTableVisibilityOption.all:
+            newList = self.searchByTermInAll(term: term)
+        case PeopleTableVisibilityOption.onlyDevelopers:
+            newList = self.searchByTermInDevelopers(term: term)
+        case PeopleTableVisibilityOption.onlyLaypeople:
+            newList = self.searchByTermInLaypeople(term: term)
+        default:
+            newList = self.searchByTermInAll(term: term)
+        }
+        
+        self.updatePeopleTable(newList)
+    }
+    
+    private func searchByTermInDevelopers(term: String) -> [Person] {
+        if !term.isEmpty {
+            let filteredList = self.getAllDevelopers().filter { $0.searchBy(term: term) }
+        
+            return filteredList
+        }
+        
+        return self.getAllDevelopers()
+    }
+    
+    private func searchByTermInLaypeople(term: String) -> [Person] {
+        if !term.isEmpty {
+            let filteredList = self.getAllLaypeople().filter { $0.searchBy(term: term) }
+            
+            return filteredList
+        }
+        return self.getAllLaypeople()
+    }
+    
+    private func searchByTermInAll(term: String) -> [Person] {
+        if !term.isEmpty {
+            let result = self.getRepository().searchBy(term: term)
+            
+            return result
+        }
+        
+        return self.getRepository().getAll()
     }
 }

@@ -43,6 +43,12 @@ class PeopleRepository: RepositoryProtocol {
         return self.items
     }
     
+    func searchBy(term: String) -> [Person] {
+        let result = self.items.filter { $0.searchBy(term: term) }
+        
+        return result
+    }
+    
     private func isIndexValid(index: Int) -> Bool {
         if index >= 0 && index < self.items.count {
             return true
@@ -50,6 +56,4 @@ class PeopleRepository: RepositoryProtocol {
         
         return false
     }
-    
-    
 }

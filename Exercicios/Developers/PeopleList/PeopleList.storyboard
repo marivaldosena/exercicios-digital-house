@@ -28,24 +28,32 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IMo-MP-pXR">
-                                <rect key="frame" x="16" y="105" width="382" height="757"/>
+                                <rect key="frame" x="16" y="191" width="382" height="671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Too many options? Search here!" translatesAutoresizingMaskIntoConstraints="NO" id="d2a-Mg-6RU">
+                                <rect key="frame" x="16" y="105" width="382" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="va7-7z-R2M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="d2a-Mg-6RU" firstAttribute="trailing" secondItem="va7-7z-R2M" secondAttribute="trailing" constant="-16" id="601-0s-8P9"/>
                             <constraint firstItem="va7-7z-R2M" firstAttribute="bottom" secondItem="IMo-MP-pXR" secondAttribute="bottom" id="6d4-o1-tAL"/>
+                            <constraint firstItem="IMo-MP-pXR" firstAttribute="top" secondItem="d2a-Mg-6RU" secondAttribute="bottom" constant="30" id="7mZ-Jy-HTq"/>
                             <constraint firstItem="va7-7z-R2M" firstAttribute="trailing" secondItem="IMo-MP-pXR" secondAttribute="trailing" constant="16" id="HdM-P3-VZO"/>
-                            <constraint firstItem="IMo-MP-pXR" firstAttribute="top" secondItem="upC-Y3-VT9" secondAttribute="bottom" constant="20" id="QFG-mR-IVc"/>
                             <constraint firstItem="upC-Y3-VT9" firstAttribute="top" secondItem="va7-7z-R2M" secondAttribute="top" constant="10" id="Tdl-Vq-YTy"/>
                             <constraint firstItem="upC-Y3-VT9" firstAttribute="centerX" secondItem="gKT-vj-KiW" secondAttribute="centerX" id="VON-jm-Bco"/>
+                            <constraint firstItem="d2a-Mg-6RU" firstAttribute="top" secondItem="upC-Y3-VT9" secondAttribute="bottom" constant="20" id="Yid-jl-g9k"/>
+                            <constraint firstItem="d2a-Mg-6RU" firstAttribute="leading" secondItem="va7-7z-R2M" secondAttribute="leading" constant="16" id="mVd-Ik-PlA"/>
                             <constraint firstItem="IMo-MP-pXR" firstAttribute="leading" secondItem="va7-7z-R2M" secondAttribute="leading" constant="16" id="sDR-Ah-zct"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="optionsSegmentedButton" destination="upC-Y3-VT9" id="NWe-H8-1as"/>
                         <outlet property="peopleTableView" destination="IMo-MP-pXR" id="YK1-xB-kWo"/>
+                        <outlet property="searchBar" destination="d2a-Mg-6RU" id="sk0-DZ-Es5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyR-ze-tOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
