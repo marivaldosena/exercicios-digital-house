@@ -12,17 +12,25 @@ class PeopleListViewController: UIViewController {
     @IBOutlet weak var peopleTableView: UITableView!
     
     private var repository = PeopleRepository()
+    private var service = PeopleService()
+    
+    private var filteredList = [Person]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        peopleTableView.register(UINib(nibName: K.ViewNames.Developers.peopleCellName, bundle: nil), forCellReuseIdentifier: K.ViewNames.Developers.peopleCellName)
 
         peopleTableView.delegate = self
         peopleTableView.dataSource = self
         
-        let downloadTask = WebUtils.getDownloadDataTask(url: "https://stackoverflow.com/tags/list/topusers",  downloadHandler: self.downloadHandler)
-        downloadTask?.resume()
+        self.downloadData()
         
         self.updateUIInterface()
+    }
+    
+    @IBAction func onOptionsSegmentButtonChanged(_ sender: UISegmentedControl) {
+        self.filterPeopleList(option: sender.selectedSegmentIndex)
     }
     
     func getRepository() -> PeopleRepository {
@@ -33,17 +41,20 @@ class PeopleListViewController: UIViewController {
         self.repository = repository
     }
     
-    private func downloadHandler(data: Data?, response: URLResponse?, error: Error?) -> Void {
-        if let error = error {
-            print("Error: \(error)")
-        } else {
-            if let response = response as? HTTPURLResponse {
-                if let data = data {
-                    print("Gotcha data!")
-                    print(data)
-                }
-            }
-        }
+    func getService() -> PeopleService {
+        return self.service
+    }
+    
+    func setService(service: PeopleService) {
+        self.service = service
+    }
+    
+    func getFilteredList() -> [Person] {
+        return filteredList
+    }
+    
+    func setFilteredList(_ collection: [Person]) {
+        self.filteredList = collection
     }
 }
 

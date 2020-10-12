@@ -16,6 +16,9 @@
 		C92F0B522530E3D100F3262D /* WebUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F0B512530E3D100F3262D /* WebUtils.swift */; };
 		C92F0B5625310FF900F3262D /* ComposerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */; };
 		C92F0B592531109300F3262D /* ComposerDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92F0B582531109300F3262D /* ComposerDetail.storyboard */; };
+		C93A1D662533D94000E1A287 /* StackOverFlowProfileSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D652533D94000E1A287 /* StackOverFlowProfileSerializer.swift */; };
+		C93A1D782534B99300E1A287 /* GithubProfileSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D772534B99200E1A287 /* GithubProfileSerializer.swift */; };
+		C93A1D7B2534C82D00E1A287 /* PeopleTableVisibilityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */; };
 		C93BF863253206780099946B /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93BF862253206780099946B /* AlertUtils.swift */; };
 		C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */; };
 		C93FC6342530030F00670A74 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC6332530030F00670A74 /* App.swift */; };
@@ -96,6 +99,9 @@
 		C92F0B512530E3D100F3262D /* WebUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebUtils.swift; sourceTree = "<group>"; };
 		C92F0B5525310FF900F3262D /* ComposerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerDetailViewController.swift; sourceTree = "<group>"; };
 		C92F0B582531109300F3262D /* ComposerDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ComposerDetail.storyboard; sourceTree = "<group>"; };
+		C93A1D652533D94000E1A287 /* StackOverFlowProfileSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverFlowProfileSerializer.swift; sourceTree = "<group>"; };
+		C93A1D772534B99200E1A287 /* GithubProfileSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubProfileSerializer.swift; sourceTree = "<group>"; };
+		C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableVisibilityOption.swift; sourceTree = "<group>"; };
 		C93BF862253206780099946B /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C93FC6332530030F00670A74 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -269,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				C95BCE04252A8CC800B2E190 /* EmployeePosition.swift */,
+				C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -276,6 +283,8 @@
 		C93A1D632532AAAB00E1A287 /* Serializers */ = {
 			isa = PBXGroup;
 			children = (
+				C93A1D652533D94000E1A287 /* StackOverFlowProfileSerializer.swift */,
+				C93A1D772534B99200E1A287 /* GithubProfileSerializer.swift */,
 			);
 			path = Serializers;
 			sourceTree = "<group>";
@@ -346,8 +355,8 @@
 		C99CAD7825326CD400B05C5F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C99CAD732532698B00B05C5F /* PeopleListTableViewCell.swift */,
 				C99CAD742532698B00B05C5F /* PeopleListTableViewCell.xib */,
+				C99CAD732532698B00B05C5F /* PeopleListTableViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -675,6 +684,7 @@
 				C93FC63D25300C1500670A74 /* AppListCollectionViewCellExtensions.swift in Sources */,
 				C95BCE05252A8CC800B2E190 /* EmployeePosition.swift in Sources */,
 				C91348ED252F72D400E8951F /* ComposerListViewController.swift in Sources */,
+				C93A1D662533D94000E1A287 /* StackOverFlowProfileSerializer.swift in Sources */,
 				C93BF863253206780099946B /* AlertUtils.swift in Sources */,
 				C9DE5993252BA91E0070DFC7 /* AnimalListViewController.swift in Sources */,
 				C9DE599C252BB0B50070DFC7 /* AnimalRepository.swift in Sources */,
@@ -723,10 +733,12 @@
 				C93FC63925300A1C00670A74 /* AppRepository.swift in Sources */,
 				C99CAD752532698B00B05C5F /* PeopleListTableViewCell.swift in Sources */,
 				C97B48DB253129070008EA61 /* UIStoryboardNavigableViewControllerProtocol.swift in Sources */,
+				C93A1D782534B99300E1A287 /* GithubProfileSerializer.swift in Sources */,
 				C9784CDE252E3A9200ED3CD4 /* CarDetailViewControllerExtensions.swift in Sources */,
 				C92F0B522530E3D100F3262D /* WebUtils.swift in Sources */,
 				C9C32BC8252F686C005F3280 /* ComposerRepository.swift in Sources */,
 				C9F34F25252A769600386FDB /* SceneDelegate.swift in Sources */,
+				C93A1D7B2534C82D00E1A287 /* PeopleTableVisibilityOption.swift in Sources */,
 				C9C6C1A5252ACA040011BA8F /* EmployeeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

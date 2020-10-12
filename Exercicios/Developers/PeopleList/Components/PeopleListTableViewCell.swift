@@ -45,14 +45,35 @@ extension PeopleListTableViewCell: CustomUITableViewCellProtocol {
             return
         }
         
-        personImageView?.image = WebUtils.getImage(imageUrl: person.imageName, fallbackImageName: K.Images.Developers.fallBackImageName)
-        personNameLabel?.text = person.name
-        profileUrlLabel?.text = person.profileUrl
+        DispatchQueue.main.async {
+            WebUtils.getImage(imageUrl: person.imageName, fallbackImage: K.Images.Developers.fallBackImageName, callback: self.handleDownloadTask)
+        }
+        //self.personImageView?.image = WebUtils.getImage(imageUrl: person.imageName, fallbackImageName: K.Images.Developers.fallBackImageName)
+        self.personImageView?.image = UIImage(systemName: "person.circle")
+        self.personNameLabel?.text = person.name
+        self.profileUrlLabel?.text = person.profileUrl
     }
     
     func clearFields() {
-        personImageView?.image = UIImage(named: "NoImage")
+        personImageView?.image = UIImage(systemName: K.Images.Developers.fallBackImageName)
         personNameLabel?.text = ""
         profileUrlLabel?.text = ""
+    }
+    
+    private func handleDownloadTask(data: Data?, response: URLResponse?, error: Error?) {
+        guard let error = error else {
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode >= 200 && response.statusCode < 300 {
+                    if let data = data {
+                        DispatchQueue.main.async {
+                            self.personImageView?.image = UIImage(data: data)
+                        }
+                    }
+                }
+            }
+            return
+        }
+        
+        print("Error: \(error)")
     }
 }

@@ -60,6 +60,11 @@ struct WebUtils {
         return image
     }
     
+    static func getImage(imageUrl: String, fallbackImage: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let downloadDataTask = getDownloadDataTask(url: imageUrl, downloadHandler: callback)
+        downloadDataTask?.resume()
+    }
+    
     static func getDownloadDataTask(url: String, downloadHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask? {
         let urlInstance = URL(string: url)
         let session = URLSession(configuration: .default)

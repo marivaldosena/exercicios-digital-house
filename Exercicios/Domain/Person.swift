@@ -14,7 +14,7 @@ class Person {
     
     init(name: String, imageName: String, profileUrl: String) {
         self.name = name
-        self.imageName = name
+        self.imageName = imageName
         self.profileUrl = profileUrl
     }
 }

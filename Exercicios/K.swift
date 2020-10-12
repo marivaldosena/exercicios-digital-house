@@ -112,9 +112,10 @@ struct K {
     
     struct API {
         struct Developers {
-            static let githubUrl = "https://commits.top/worldwide.html"
+            static let githubUrl = "https://github.com"
             static let mostActiveGithubUsersRankingUrl = "https://commits.top/worldwide.html"
             static let stackOverFlowMostActiveUsersRankingUrl = "https://stackoverflow.com/tags/list/topusers"
+            static let stackOverFlowBaseUrl = "https://stackoverflow.com"
         }
     }
 }
