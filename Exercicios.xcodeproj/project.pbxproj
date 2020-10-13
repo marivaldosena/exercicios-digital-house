@@ -21,6 +21,7 @@
 		C93A1D7B2534C82D00E1A287 /* PeopleTableVisibilityOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */; };
 		C93A1D7E2534EB7B00E1A287 /* DeveloperDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D7D2534EB7A00E1A287 /* DeveloperDetailViewController.swift */; };
 		C93A1D812534EC3900E1A287 /* DeveloperDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93A1D802534EC3900E1A287 /* DeveloperDetail.storyboard */; };
+		C93A1D8B25351EF900E1A287 /* PeopleTableSortingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A1D8A25351EF800E1A287 /* PeopleTableSortingOption.swift */; };
 		C93BF863253206780099946B /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93BF862253206780099946B /* AlertUtils.swift */; };
 		C93FC6302530022500670A74 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */; };
 		C93FC6342530030F00670A74 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93FC6332530030F00670A74 /* App.swift */; };
@@ -106,6 +107,7 @@
 		C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableVisibilityOption.swift; sourceTree = "<group>"; };
 		C93A1D7D2534EB7A00E1A287 /* DeveloperDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperDetailViewController.swift; sourceTree = "<group>"; };
 		C93A1D802534EC3900E1A287 /* DeveloperDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DeveloperDetail.storyboard; sourceTree = "<group>"; };
+		C93A1D8A25351EF800E1A287 /* PeopleTableSortingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableSortingOption.swift; sourceTree = "<group>"; };
 		C93BF862253206780099946B /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 		C93FC62F2530022500670A74 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
 		C93FC6332530030F00670A74 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				C95BCE04252A8CC800B2E190 /* EmployeePosition.swift */,
 				C93A1D7A2534C82D00E1A287 /* PeopleTableVisibilityOption.swift */,
+				C93A1D8A25351EF800E1A287 /* PeopleTableSortingOption.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -698,6 +701,7 @@
 				C99CAD7F253280B300B05C5F /* PeopleListViewControllerExtensions.swift in Sources */,
 				C9134906252F78C100E8951F /* ComposerListCollectionViewCellExtensions.swift in Sources */,
 				C9DE599F252BB8700070DFC7 /* AnimalSeed.swift in Sources */,
+				C93A1D8B25351EF900E1A287 /* PeopleTableSortingOption.swift in Sources */,
 				C95BCE0B252ABA1300B2E190 /* EmployeeListTableViewCell.swift in Sources */,
 				C9A5E848252C029900220E9F /* CarListViewController.swift in Sources */,
 				C9784CD8252E35BE00ED3CD4 /* CarListCollectionViewCell.swift in Sources */,

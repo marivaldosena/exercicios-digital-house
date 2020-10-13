@@ -207,3 +207,92 @@ extension PeopleListViewController: UISearchBarDelegate {
         return self.getRepository().getAll()
     }
 }
+
+//MARK: - PeopleListViewController: UIPickerViewDelegate
+extension PeopleListViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        let sortingStyle = self.getSelectedOption(pickerView)
+        
+        self.doSorting(sortingStyle: sortingStyle)
+    }
+    
+    private func doSorting(sortingStyle: Int) {
+        switch sortingStyle {
+        case PeopleTableSortingOption.nameAscending:
+            self.doSortByNameInAscendingOrder()
+        case PeopleTableSortingOption.nameDescending:
+            self.doSortByNameInDescendingOrder()
+        case PeopleTableSortingOption.profileUrlAscending:
+            self.doSortByProfileUrlInAscendingOrder()
+        case PeopleTableSortingOption.profileUrlDescending:
+            self.doSortByProfileUrlInDescendingOrder()
+        default:
+            self.doSortByNameInAscendingOrder()
+        }
+    }
+    
+    private func doSortByNameInAscendingOrder() {
+        let newList = self.getFilteredList().sorted { $0 < $1 }
+        
+        self.updatePeopleTable(newList)
+    }
+    
+    private func doSortByNameInDescendingOrder() {
+        let newList = self.getFilteredList().sorted { $0 > $1 }
+        
+        self.updatePeopleTable(newList)
+    }
+    
+    private func doSortByProfileUrlInAscendingOrder() {
+        let newList = self.getFilteredList().sorted { $0.profileUrl < $1.profileUrl }
+        
+        self.updatePeopleTable(newList)
+    }
+    
+    private func doSortByProfileUrlInDescendingOrder() {
+        let newList = self.getFilteredList().sorted { $0.profileUrl > $1.profileUrl }
+        
+        self.updatePeopleTable(newList)
+    }
+    
+    private func getSelectedOption(_ pickerView: UIPickerView) -> Int {
+        let firstOption = pickerView.selectedRow(inComponent: 0)
+        let secondOption = pickerView.selectedRow(inComponent: 1)
+        
+        let category = self.getSortingOption()[0][firstOption]
+        let sorting = self.getSortingOption()[1][secondOption]
+        
+        var result: Int
+        
+        if category.contains("Profile") {
+            if sorting.contains("Asc") {
+                result = PeopleTableSortingOption.profileUrlAscending
+            } else {
+                result = PeopleTableSortingOption.profileUrlDescending
+            }
+        } else {
+            if sorting.contains("Desc") {
+                result = PeopleTableSortingOption.nameDescending
+            } else {
+                result = PeopleTableSortingOption.nameAscending
+            }
+        }
+        
+        return result
+    }
+}
+
+extension PeopleListViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.getSortingOption()[component][row]
+    }
+}

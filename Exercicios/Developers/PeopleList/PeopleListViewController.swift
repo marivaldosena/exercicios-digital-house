@@ -11,12 +11,17 @@ class PeopleListViewController: UIViewController {
     @IBOutlet weak var optionsSegmentedButton: UISegmentedControl!
     @IBOutlet weak var peopleTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var sortingOptionPickerView: UIPickerView!
     
     private var repository = PeopleRepository()
     private var service = PeopleService()
     private var filteredOption: Int = PeopleTableVisibilityOption.all
     
     private var filteredList = [Person]()
+    private var sortingOptions = [
+        ["Name", "Profile URL"],
+        ["Asc", "Desc"]
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +30,12 @@ class PeopleListViewController: UIViewController {
 
         peopleTableView.delegate = self
         peopleTableView.dataSource = self
-        
         searchBar.delegate = self
         
-        self.downloadData()
+        sortingOptionPickerView.delegate = self
+        sortingOptionPickerView.dataSource = self
         
+        self.downloadData()
         self.updateUIInterface()
     }
     
@@ -67,6 +73,10 @@ class PeopleListViewController: UIViewController {
     
     func setFilteredOption(option: Int) {
         self.filteredOption = option
+    }
+    
+    func getSortingOption() -> [[String]] {
+        return self.sortingOptions
     }
 }
 
