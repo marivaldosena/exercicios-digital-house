@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C9EF601F253B6C580010CF04 /* Hero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9EF601F253B6C580010CF04 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EF6022253B6C580010CF04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9EF6024253B6C580010CF04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C9EF6026253B6C580010CF04 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		C9EF6016253B6C580010CF04 = {
 			isa = PBXGroup;
 			children = (
-				C9EF6021253B6C580010CF04 /* Hero */,
+				C9EF6021253B6C580010CF04 /* Movies */,
 				C9EF6020253B6C580010CF04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,12 +57,12 @@
 		C9EF6020253B6C580010CF04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9EF601F253B6C580010CF04 /* Hero.app */,
+				C9EF601F253B6C580010CF04 /* Movies.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C9EF6021253B6C580010CF04 /* Hero */ = {
+		C9EF6021253B6C580010CF04 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
 				C9EF6022253B6C580010CF04 /* AppDelegate.swift */,
@@ -72,15 +72,15 @@
 				C9EF602D253B6C5C0010CF04 /* LaunchScreen.storyboard */,
 				C9EF6030253B6C5C0010CF04 /* Info.plist */,
 			);
-			path = Hero;
+			path = Movies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C9EF601E253B6C580010CF04 /* Hero */ = {
+		C9EF601E253B6C580010CF04 /* Movies */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9EF6033253B6C5C0010CF04 /* Build configuration list for PBXNativeTarget "Hero" */;
+			buildConfigurationList = C9EF6033253B6C5C0010CF04 /* Build configuration list for PBXNativeTarget "Movies" */;
 			buildPhases = (
 				C9EF601B253B6C580010CF04 /* Sources */,
 				C9EF601C253B6C580010CF04 /* Frameworks */,
@@ -90,9 +90,9 @@
 			);
 			dependencies = (
 			);
-			name = Hero;
+			name = Movies;
 			productName = Hero;
-			productReference = C9EF601F253B6C580010CF04 /* Hero.app */;
+			productReference = C9EF601F253B6C580010CF04 /* Movies.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C9EF601A253B6C580010CF04 /* Build configuration list for PBXProject "Hero" */;
+			buildConfigurationList = C9EF601A253B6C580010CF04 /* Build configuration list for PBXProject "Movies" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C9EF601E253B6C580010CF04 /* Hero */,
+				C9EF601E253B6C580010CF04 /* Movies */,
 			);
 		};
 /* End PBXProject section */
@@ -296,12 +296,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N4P82U958;
-				INFOPLIST_FILE = Hero/Info.plist;
+				INFOPLIST_FILE = Movies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.marivaldosena.Hero;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.marivaldosena.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,12 +315,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7N4P82U958;
-				INFOPLIST_FILE = Hero/Info.plist;
+				INFOPLIST_FILE = Movies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.marivaldosena.Hero;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.marivaldosena.Movies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C9EF601A253B6C580010CF04 /* Build configuration list for PBXProject "Hero" */ = {
+		C9EF601A253B6C580010CF04 /* Build configuration list for PBXProject "Movies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9EF6031253B6C5C0010CF04 /* Debug */,
@@ -339,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9EF6033253B6C5C0010CF04 /* Build configuration list for PBXNativeTarget "Hero" */ = {
+		C9EF6033253B6C5C0010CF04 /* Build configuration list for PBXNativeTarget "Movies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9EF6034253B6C5C0010CF04 /* Debug */,
