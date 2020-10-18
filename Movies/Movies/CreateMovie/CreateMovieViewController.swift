@@ -22,26 +22,21 @@ class CreateMovieViewController: UIViewController {
     }
 }
 
-//MARK: -
+//MARK: - CreateMovieViewController
 extension CreateMovieViewController {
     func saveMovie(_ item: Movie?) {
         print("Saving movie...")
     }
 }
 
-//MARK: - CreateMovieViewController
-extension CreateMovieViewController {
-    static func getViewController() -> CreateMovieViewController? {
-        guard let viewController = UIStoryboard(name: self.getControllerName(), bundle: nil).instantiateInitialViewController() as? Self else {
+//MARK: - CreateMovieViewController: NavigableViewController
+extension CreateMovieViewController: NavigableViewControllerProtocol {
+    typealias T = CreateMovieViewController
+    static func getViewController() -> T? {
+        guard let viewController = UIStoryboard(name: self.getControllerName(), bundle: nil).instantiateInitialViewController() as? T else {
             return nil
         }
         
         return viewController
-    }
-    
-    private static func getControllerName() -> String {
-        let controllerName = "\(String(describing: self).replacingOccurrences(of: "ViewController", with: ""))"
-        
-        return controllerName
     }
 }

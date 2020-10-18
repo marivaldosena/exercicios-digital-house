@@ -36,7 +36,7 @@ class MovieItemTableViewCell: UITableViewCell, CustomTableViewCellProtocol {
         
         guard let item = item else { return }
         
-        movieImageView?.image = UIImage(named: item.image)
+        movieImageView?.image = UIImage(named: item.imageName)
         movieTitleLabel?.text = item.title
         movieCategoryLabel?.text = item.category
         starCountButton?.setTitle("\(item.starCount)", for: .normal)

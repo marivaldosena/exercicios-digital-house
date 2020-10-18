@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mwT-Lc-kDD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie-->
+        <scene sceneID="keI-Dy-TSy">
+            <objects>
+                <viewController title="Movie" id="mwT-Lc-kDD" customClass="MovieDetailsViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Kp-ZK-d57">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-og-hoS">
+                                <rect key="frame" x="52" y="52" width="310" height="310"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="310" id="J0Q-B9-HwH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPIDER MAN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzP-Tc-W8g">
+                                <rect key="frame" x="52" y="390" width="310" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5TI-ol-EAH">
+                                <rect key="frame" x="0.0" y="732" width="414" height="130"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="vUH-Ef-OUO"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ufL-2R-7Vy">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t5M-BV-E1e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5TI-ol-EAH" firstAttribute="leading" secondItem="t5M-BV-E1e" secondAttribute="leading" id="A6N-N1-f0D"/>
+                            <constraint firstItem="CzP-Tc-W8g" firstAttribute="top" secondItem="CfQ-og-hoS" secondAttribute="bottom" constant="28" id="AnL-vE-zDc"/>
+                            <constraint firstItem="CzP-Tc-W8g" firstAttribute="leading" secondItem="t5M-BV-E1e" secondAttribute="leading" constant="52" id="Qs8-cs-cTN"/>
+                            <constraint firstItem="t5M-BV-E1e" firstAttribute="trailing" secondItem="CzP-Tc-W8g" secondAttribute="trailing" constant="52" id="RrX-oj-FGx"/>
+                            <constraint firstItem="t5M-BV-E1e" firstAttribute="trailing" secondItem="5TI-ol-EAH" secondAttribute="trailing" id="W17-jb-Lfa"/>
+                            <constraint firstItem="CfQ-og-hoS" firstAttribute="leading" secondItem="t5M-BV-E1e" secondAttribute="leading" constant="52" id="WcJ-uw-6QV"/>
+                            <constraint firstItem="CfQ-og-hoS" firstAttribute="top" secondItem="t5M-BV-E1e" secondAttribute="top" constant="8" id="Xkb-gM-bfn"/>
+                            <constraint firstItem="t5M-BV-E1e" firstAttribute="bottom" secondItem="5TI-ol-EAH" secondAttribute="bottom" id="bFL-qo-Wzt"/>
+                            <constraint firstItem="t5M-BV-E1e" firstAttribute="trailing" secondItem="CfQ-og-hoS" secondAttribute="trailing" constant="52" id="grg-Wy-Gmb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieImageView" destination="CfQ-og-hoS" id="H5A-Cw-nMM"/>
+                        <outlet property="movieTitleLabel" destination="CzP-Tc-W8g" id="fpt-I8-0BZ"/>
+                        <outlet property="relatedMoviesCollectionView" destination="5TI-ol-EAH" id="4Kp-2u-L5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXc-8J-it5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326.08695652173918" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

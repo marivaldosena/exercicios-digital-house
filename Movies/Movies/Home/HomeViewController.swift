@@ -15,8 +15,8 @@ class HomeViewController: UIViewController {
     
     private var movies = [
         Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8),
-        Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8),
-        Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8)
+        Movie(title: "Avengers: Infinity War", category: "Action", image: "AvengersInfinityWar", starCount: 8),
+        Movie(title: "The Avengers", category: "Action", image: "Avengers", starCount: 8)
     ]
     
     @IBAction func addMovie(_ sender: UIBarButtonItem) {
@@ -48,6 +48,14 @@ extension HomeViewController {
 
 //MARK: - HomeViewController: UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let viewController = MovieDetailsViewController.getViewController() else {
+            return
+        }
+        
+        viewController.setMovieItem(movies[indexPath.row])
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 //MARK: -  HomeViewController: UITableViewDataSource
