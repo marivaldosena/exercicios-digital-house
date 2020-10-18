@@ -8,6 +8,16 @@
 import UIKit
 
 class MovieItemTableViewCell: UITableViewCell {
+    @IBOutlet weak var movieImageView: UIImageView?
+    @IBOutlet weak var movieTitleLabel: UILabel?
+    @IBOutlet weak var movieCategoryLabel: UILabel?
+    @IBOutlet weak var starCountButton: UIButton?
+    
+    private var starButtonIconName = "star"
+    
+    @IBAction func starCountButtonClicked(_ sender: UIButton) {
+        self.favoriteMovie(nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,7 +27,39 @@ class MovieItemTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
+    func configure(with item: Movie?) {
+        self.clearFields()
+        
+        guard let item = item else { return }
+        
+        movieImageView?.image = UIImage(named: item.image)
+        movieTitleLabel?.text = item.title
+        movieCategoryLabel?.text = item.category
+        starCountButton?.setTitle("\(item.starCount)", for: .normal)
+    }
+    
+    func clearFields() {
+        movieImageView?.image = UIImage(systemName: "exclamationmark.square")
+        movieTitleLabel?.text = "Movie Title"
+        movieCategoryLabel?.text = "Category"
+        starCountButton?.setTitle("0", for: .normal)
+    }
+    
+    private func favoriteMovie(_ item: Movie?) {
+        self.changeStarCountButtonIcon()
+    }
+    
+    private func changeStarCountButtonIcon() {
+        if self.starButtonIconName == "star" {
+            self.starButtonIconName = "star.fill"
+        } else {
+            self.starButtonIconName = "star"
+        }
+        
+        DispatchQueue.main.async {
+            self.starCountButton?.imageView?.image = UIImage(systemName: self.starButtonIconName)
+        }
+    }
 }
