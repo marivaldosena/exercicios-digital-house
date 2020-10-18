@@ -14,6 +14,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var movieTableView: UITableView?
     
     private var movies = [
+        Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8),
+        Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8),
         Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8)
     ]
 
