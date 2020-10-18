@@ -23,7 +23,7 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qOJ-DU-NmI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qOJ-DU-NmI">
                                 <rect key="frame" x="0.0" y="159" width="414" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -41,7 +41,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meus Filmes" id="F9e-s9-hPD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yHj-T8-1LN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yHj-T8-1LN">
+                            <connections>
+                                <action selector="addMovie:" destination="BYZ-38-t0r" id="EG7-aB-eFN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addMovieBarButtonItem" destination="yHj-T8-1LN" id="Vw1-M7-hgE"/>

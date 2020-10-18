@@ -18,6 +18,10 @@ class HomeViewController: UIViewController {
         Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8),
         Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8)
     ]
+    
+    @IBAction func addMovie(_ sender: UIBarButtonItem) {
+        self.goToAddMovie()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +35,22 @@ class HomeViewController: UIViewController {
 
 }
 
-//MARK: -
+//MARK: - HomeViewController
+extension HomeViewController {
+    func goToAddMovie() {
+        guard let viewController = CreateMovieViewController.getViewController() else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+//MARK: - HomeViewController: UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
 }
 
+//MARK: -  HomeViewController: UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count

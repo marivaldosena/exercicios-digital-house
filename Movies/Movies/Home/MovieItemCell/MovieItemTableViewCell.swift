@@ -7,7 +7,9 @@
 
 import UIKit
 
-class MovieItemTableViewCell: UITableViewCell {
+class MovieItemTableViewCell: UITableViewCell, CustomTableViewCellProtocol {
+    typealias Item = Movie
+    
     @IBOutlet weak var movieImageView: UIImageView?
     @IBOutlet weak var movieTitleLabel: UILabel?
     @IBOutlet weak var movieCategoryLabel: UILabel?
