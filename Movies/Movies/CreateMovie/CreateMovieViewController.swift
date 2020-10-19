@@ -9,12 +9,19 @@ import UIKit
 
 //MARK: - CreateMovieViewController: UIViewController
 class CreateMovieViewController: UIViewController {
-    @IBOutlet weak var movieNameLabel: UITextField?
-    @IBOutlet weak var movieCategoryLabel: UITextField?
+    @IBOutlet weak var movieNameTextField: UITextField?
+    @IBOutlet weak var movieCategoryTextField: UITextField?
     @IBOutlet weak var saveButton: UIButton?
     
+    private var movieManager = MovieManager.getManagerInstance()
+    
     @IBAction func saveMovie(_ sender: UIButton) {
-        self.saveMovie(nil)
+        if let movieTitle = movieNameTextField?.text, let movieCategory = movieCategoryTextField?.text {
+            if !movieTitle.isEmpty  && !movieCategory.isEmpty {
+                let movie = Movie(title: movieTitle, category: movieCategory, image: "flame", starCount: 0)
+                self.saveMovie(movie)
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -25,7 +32,9 @@ class CreateMovieViewController: UIViewController {
 //MARK: - CreateMovieViewController
 extension CreateMovieViewController {
     func saveMovie(_ item: Movie?) {
-        print("Saving movie...")
+        movieManager.add(item)
+        
+        navigationController?.popToRootViewController(animated: true)
     }
 }
 

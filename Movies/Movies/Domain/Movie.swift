@@ -21,3 +21,11 @@ struct Movie {
         self.starCount = starCount
     }
 }
+
+extension Movie: Equatable {
+    static func == (lhs: Movie, rhs: Movie) -> Bool {
+        let isEqual = lhs.title == rhs.title && lhs.category == lhs.category
+        
+        return isEqual
+    }
+}

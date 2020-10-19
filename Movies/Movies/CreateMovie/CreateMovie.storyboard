@@ -67,8 +67,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="movieCategoryLabel" destination="j6W-3G-OeT" id="zo1-z2-lne"/>
-                        <outlet property="movieNameLabel" destination="Qy5-7X-e2W" id="gR4-iC-bKZ"/>
+                        <outlet property="movieCategoryTextField" destination="j6W-3G-OeT" id="zo1-z2-lne"/>
+                        <outlet property="movieNameTextField" destination="Qy5-7X-e2W" id="gR4-iC-bKZ"/>
                         <outlet property="saveButton" destination="Uaf-L7-scK" id="rnv-wG-uHF"/>
                     </connections>
                 </viewController>

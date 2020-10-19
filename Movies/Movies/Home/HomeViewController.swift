@@ -13,11 +13,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var addMovieBarButtonItem: UIBarButtonItem?
     @IBOutlet weak var movieTableView: UITableView?
     
-    private var allMovies = [
-        Movie(title: "Avengers: Endgame", category: "Action", image: "AvengersEndgame", starCount: 8),
-        Movie(title: "Avengers: Infinity War", category: "Action", image: "AvengersInfinityWar", starCount: 8),
-        Movie(title: "The Avengers", category: "Action", image: "Avengers", starCount: 8)
-    ]
+    private var movieManager = MovieManager.getManagerInstance()
     
     private var filteredMovies: [Movie] = []
     
@@ -28,14 +24,24 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.movieManager.addAll(MovieSeed.seed())
+        
         movieTableView?.delegate = self
         movieTableView?.dataSource = self
         
         movieTableView?.register(UINib(nibName: "MovieItemTableViewCell", bundle: nil), forCellReuseIdentifier: "MovieItemCell")
         
-        filteredMovies.append(contentsOf: allMovies)
+        filteredMovies.append(contentsOf: movieManager.getAll())
         
         movieSearchBar?.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.filteredMovies = movieManager.getAll()
+        
+        DispatchQueue.main.async {
+            self.movieTableView?.reloadData()
+        }
     }
 }
 
@@ -46,6 +52,7 @@ extension HomeViewController {
             return
         }
         
+        //viewController.setMovieManager(self.movieManager)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -56,6 +63,7 @@ extension HomeViewController: UITableViewDelegate {
         guard let viewController = MovieDetailsViewController.getViewController() else {
             return
         }
+        
         
         viewController.setMovieItem(filteredMovies[indexPath.row])
         navigationController?.pushViewController(viewController, animated: true)
@@ -102,9 +110,9 @@ extension HomeViewController: UISearchBarDelegate {
     
     private func getFilteredMovies(term: String) -> [Movie] {
         if !term.isEmpty {
-            return allMovies.filter { $0.title.lowercased().contains(term.lowercased()) }
+            return self.movieManager.search(term: term)
         }
         
-        return allMovies
+        return self.movieManager.getAll()
     }
 }
