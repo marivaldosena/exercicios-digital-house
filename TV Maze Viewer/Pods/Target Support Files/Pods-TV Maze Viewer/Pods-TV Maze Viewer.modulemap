@@ -1,0 +1,6 @@
+framework module Pods_TV_Maze_Viewer {
+  umbrella header "Pods-TV Maze Viewer-umbrella.h"
+
+  export *
+  module * { export * }
+}
